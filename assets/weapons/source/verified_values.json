@@ -1,0 +1,457 @@
+{
+  "retrieved": "2026-09-13",
+  "source": "https://raw.githubusercontent.com/SteamTracking/GameTracking-CS2/master/game/csgo/pak01_dir/scripts/weapons.vdata",
+  "sha256": "fbd0d6f754c234efb24ec5c6b8c335f190e67f17ac7ec98dc2cd2ea2ddb4037e",
+  "values": [
+    {
+      "id": "glock",
+      "price": 200,
+      "damage": 30,
+      "magazine": 20,
+      "reserve": 60,
+      "reserve_is_clips": true,
+      "fire_rate": 6.667,
+      "pellets": 1
+    },
+    {
+      "id": "usp_silencer",
+      "price": 200,
+      "damage": 35,
+      "magazine": 12,
+      "reserve": 24,
+      "reserve_is_clips": true,
+      "fire_rate": 5.882,
+      "pellets": 1
+    },
+    {
+      "id": "hkp2000",
+      "price": 200,
+      "damage": 35,
+      "magazine": 13,
+      "reserve": 52,
+      "reserve_is_clips": true,
+      "fire_rate": 5.882,
+      "pellets": 1
+    },
+    {
+      "id": "p250",
+      "price": 300,
+      "damage": 38,
+      "magazine": 13,
+      "reserve": 39,
+      "reserve_is_clips": true,
+      "fire_rate": 6.667,
+      "pellets": 1
+    },
+    {
+      "id": "elite",
+      "price": 300,
+      "damage": 38,
+      "magazine": 30,
+      "reserve": 60,
+      "reserve_is_clips": true,
+      "fire_rate": 8.333,
+      "pellets": 1
+    },
+    {
+      "id": "fiveseven",
+      "price": 500,
+      "damage": 32,
+      "magazine": 20,
+      "reserve": 40,
+      "reserve_is_clips": true,
+      "fire_rate": 6.667,
+      "pellets": 1
+    },
+    {
+      "id": "tec9",
+      "price": 500,
+      "damage": 33,
+      "magazine": 18,
+      "reserve": 54,
+      "reserve_is_clips": true,
+      "fire_rate": 8.333,
+      "pellets": 1
+    },
+    {
+      "id": "cz75a",
+      "price": 500,
+      "damage": 31,
+      "magazine": 12,
+      "reserve": 24,
+      "reserve_is_clips": true,
+      "fire_rate": 10.0,
+      "pellets": 1
+    },
+    {
+      "id": "deagle",
+      "price": 700,
+      "damage": 53,
+      "magazine": 7,
+      "reserve": 21,
+      "reserve_is_clips": true,
+      "fire_rate": 4.444,
+      "pellets": 1
+    },
+    {
+      "id": "revolver",
+      "price": 600,
+      "damage": 86,
+      "magazine": 8,
+      "reserve": 16,
+      "reserve_is_clips": true,
+      "fire_rate": 2.0,
+      "pellets": 1
+    },
+    {
+      "id": "ak47",
+      "price": 2700,
+      "damage": 36,
+      "magazine": 30,
+      "reserve": 90,
+      "reserve_is_clips": true,
+      "fire_rate": 10.0,
+      "pellets": 1
+    },
+    {
+      "id": "m4a1",
+      "price": 2900,
+      "damage": 33,
+      "magazine": 30,
+      "reserve": 120,
+      "reserve_is_clips": true,
+      "fire_rate": 11.111,
+      "pellets": 1
+    },
+    {
+      "id": "m4a1_silencer",
+      "price": 2900,
+      "damage": 38,
+      "magazine": 20,
+      "reserve": 60,
+      "reserve_is_clips": true,
+      "fire_rate": 10.0,
+      "pellets": 1
+    },
+    {
+      "id": "galilar",
+      "price": 1800,
+      "damage": 30,
+      "magazine": 35,
+      "reserve": 140,
+      "reserve_is_clips": true,
+      "fire_rate": 11.111,
+      "pellets": 1
+    },
+    {
+      "id": "famas",
+      "price": 1950,
+      "damage": 30,
+      "magazine": 25,
+      "reserve": 100,
+      "reserve_is_clips": true,
+      "fire_rate": 11.111,
+      "pellets": 1
+    },
+    {
+      "id": "aug",
+      "price": 3300,
+      "damage": 28,
+      "magazine": 30,
+      "reserve": 90,
+      "reserve_is_clips": true,
+      "fire_rate": 10.0,
+      "pellets": 1
+    },
+    {
+      "id": "sg556",
+      "price": 3000,
+      "damage": 30,
+      "magazine": 30,
+      "reserve": 90,
+      "reserve_is_clips": true,
+      "fire_rate": 9.091,
+      "pellets": 1
+    },
+    {
+      "id": "ssg08",
+      "price": 1700,
+      "damage": 88,
+      "magazine": 10,
+      "reserve": 20,
+      "reserve_is_clips": true,
+      "fire_rate": 0.8,
+      "pellets": 1
+    },
+    {
+      "id": "awp",
+      "price": 4750,
+      "damage": 115,
+      "magazine": 5,
+      "reserve": 10,
+      "reserve_is_clips": true,
+      "fire_rate": 0.687,
+      "pellets": 1
+    },
+    {
+      "id": "scar20",
+      "price": 5000,
+      "damage": 80,
+      "magazine": 20,
+      "reserve": 40,
+      "reserve_is_clips": true,
+      "fire_rate": 4.0,
+      "pellets": 1
+    },
+    {
+      "id": "g3sg1",
+      "price": 5000,
+      "damage": 80,
+      "magazine": 20,
+      "reserve": 40,
+      "reserve_is_clips": true,
+      "fire_rate": 4.0,
+      "pellets": 1
+    },
+    {
+      "id": "mac10",
+      "price": 1050,
+      "damage": 29,
+      "magazine": 30,
+      "reserve": 90,
+      "reserve_is_clips": true,
+      "fire_rate": 13.333,
+      "pellets": 1
+    },
+    {
+      "id": "mp9",
+      "price": 1250,
+      "damage": 26,
+      "magazine": 30,
+      "reserve": 60,
+      "reserve_is_clips": true,
+      "fire_rate": 14.286,
+      "pellets": 1
+    },
+    {
+      "id": "mp7",
+      "price": 1400,
+      "damage": 30,
+      "magazine": 30,
+      "reserve": 90,
+      "reserve_is_clips": true,
+      "fire_rate": 12.5,
+      "pellets": 1
+    },
+    {
+      "id": "mp5sd",
+      "price": 1400,
+      "damage": 28,
+      "magazine": 30,
+      "reserve": 90,
+      "reserve_is_clips": true,
+      "fire_rate": 12.5,
+      "pellets": 1
+    },
+    {
+      "id": "ump45",
+      "price": 1200,
+      "damage": 35,
+      "magazine": 25,
+      "reserve": 75,
+      "reserve_is_clips": true,
+      "fire_rate": 11.111,
+      "pellets": 1
+    },
+    {
+      "id": "p90",
+      "price": 2350,
+      "damage": 26,
+      "magazine": 50,
+      "reserve": 100,
+      "reserve_is_clips": true,
+      "fire_rate": 14.286,
+      "pellets": 1
+    },
+    {
+      "id": "bizon",
+      "price": 1300,
+      "damage": 27,
+      "magazine": 64,
+      "reserve": 128,
+      "reserve_is_clips": true,
+      "fire_rate": 12.5,
+      "pellets": 1
+    },
+    {
+      "id": "nova",
+      "price": 1050,
+      "damage": 26,
+      "magazine": 8,
+      "reserve": 32,
+      "reserve_is_clips": false,
+      "fire_rate": 1.136,
+      "pellets": 9
+    },
+    {
+      "id": "xm1014",
+      "price": 2000,
+      "damage": 20,
+      "magazine": 7,
+      "reserve": 32,
+      "reserve_is_clips": false,
+      "fire_rate": 2.857,
+      "pellets": 6
+    },
+    {
+      "id": "mag7",
+      "price": 1300,
+      "damage": 30,
+      "magazine": 5,
+      "reserve": 15,
+      "reserve_is_clips": true,
+      "fire_rate": 1.176,
+      "pellets": 8
+    },
+    {
+      "id": "sawedoff",
+      "price": 1100,
+      "damage": 32,
+      "magazine": 7,
+      "reserve": 32,
+      "reserve_is_clips": false,
+      "fire_rate": 1.176,
+      "pellets": 8
+    },
+    {
+      "id": "m249",
+      "price": 5200,
+      "damage": 32,
+      "magazine": 100,
+      "reserve": 200,
+      "reserve_is_clips": true,
+      "fire_rate": 12.5,
+      "pellets": 1
+    },
+    {
+      "id": "negev",
+      "price": 1700,
+      "damage": 35,
+      "magazine": 150,
+      "reserve": 300,
+      "reserve_is_clips": true,
+      "fire_rate": 13.333,
+      "pellets": 1
+    },
+    {
+      "id": "taser",
+      "price": 200,
+      "damage": 500,
+      "magazine": 1,
+      "reserve": 0,
+      "reserve_is_clips": true,
+      "fire_rate": 6.667,
+      "pellets": 1
+    },
+    {
+      "id": "hegrenade",
+      "price": 300,
+      "damage": 99,
+      "magazine": 1,
+      "reserve": 0,
+      "reserve_is_clips": false,
+      "fire_rate": 6.667,
+      "pellets": 1
+    },
+    {
+      "id": "smokegrenade",
+      "price": 300,
+      "damage": 50,
+      "magazine": 1,
+      "reserve": 0,
+      "reserve_is_clips": false,
+      "fire_rate": 6.667,
+      "pellets": 1
+    },
+    {
+      "id": "flashbang",
+      "price": 200,
+      "damage": 50,
+      "magazine": 1,
+      "reserve": 0,
+      "reserve_is_clips": false,
+      "fire_rate": 6.667,
+      "pellets": 1
+    },
+    {
+      "id": "molotov",
+      "price": 400,
+      "damage": 40,
+      "magazine": 1,
+      "reserve": 0,
+      "reserve_is_clips": false,
+      "fire_rate": 6.667,
+      "pellets": 1
+    },
+    {
+      "id": "incgrenade",
+      "price": 500,
+      "damage": 40,
+      "magazine": 1,
+      "reserve": 0,
+      "reserve_is_clips": false,
+      "fire_rate": 6.667,
+      "pellets": 1
+    },
+    {
+      "id": "decoy",
+      "price": 50,
+      "damage": 50,
+      "magazine": 1,
+      "reserve": 0,
+      "reserve_is_clips": false,
+      "fire_rate": 6.667,
+      "pellets": 1
+    },
+    {
+      "id": "armor",
+      "price": 650,
+      "damage": 0,
+      "magazine": 0,
+      "reserve": 0,
+      "reserve_is_clips": false,
+      "fire_rate": 6.667,
+      "pellets": 1
+    },
+    {
+      "id": "helmet",
+      "price": 1000,
+      "damage": 0,
+      "magazine": 0,
+      "reserve": 0,
+      "reserve_is_clips": false,
+      "fire_rate": 6.667,
+      "pellets": 1
+    },
+    {
+      "id": "kit",
+      "price": 400,
+      "damage": 0,
+      "magazine": 0,
+      "reserve": 0,
+      "reserve_is_clips": false,
+      "fire_rate": 6.667,
+      "pellets": 1
+    },
+    {
+      "id": "knife",
+      "price": 0,
+      "damage": 45,
+      "magazine": 1,
+      "reserve": 0,
+      "reserve_is_clips": false,
+      "fire_rate": 2.0,
+      "pellets": 1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://assets/weapons/p90_Model.res" id="1_3v5hb"]
+
+[node name="p90" type="Node3D" unique_id=1263087935]
+metadata/weapon_id = "p90"
+metadata/category = "smg"
+metadata/muzzle = [0.0, 0.077, -0.479]
+metadata/original_art = true
+
+[node name="Model" type="Node3D" parent="." unique_id=181696991]
+
+[node name="Sculpture" type="MeshInstance3D" parent="Model" unique_id=2024122645]
+mesh = ExtResource("1_3v5hb")
+
+[node name="Muzzle" type="Node3D" parent="." unique_id=1721677511]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.077, -0.479)

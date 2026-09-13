@@ -1,0 +1,16 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://assets/weapons/molotov_Model.res" id="1_r7sxe"]
+
+[node name="molotov" type="Node3D" unique_id=347839717]
+metadata/weapon_id = "molotov"
+metadata/category = "grenade"
+metadata/muzzle = [0.0, 0.0, 0.0]
+metadata/original_art = true
+
+[node name="Model" type="Node3D" parent="." unique_id=31055741]
+
+[node name="Sculpture" type="MeshInstance3D" parent="Model" unique_id=1210660878]
+mesh = ExtResource("1_r7sxe")
+
+[node name="Muzzle" type="Node3D" parent="." unique_id=590192344]

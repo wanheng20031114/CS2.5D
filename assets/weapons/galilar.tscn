@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://assets/weapons/galilar_Model.res" id="1_nqii8"]
+
+[node name="galilar" type="Node3D" unique_id=321474862]
+metadata/weapon_id = "galilar"
+metadata/category = "rifle"
+metadata/muzzle = [0.0, 0.082, -0.793]
+metadata/original_art = true
+
+[node name="Model" type="Node3D" parent="." unique_id=677459692]
+
+[node name="Sculpture" type="MeshInstance3D" parent="Model" unique_id=1091249162]
+mesh = ExtResource("1_nqii8")
+
+[node name="Muzzle" type="Node3D" parent="." unique_id=177398579]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.082, -0.793)

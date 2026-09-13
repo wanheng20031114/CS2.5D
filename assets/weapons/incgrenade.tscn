@@ -1,0 +1,16 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://assets/weapons/incgrenade_Model.res" id="1_hhtv7"]
+
+[node name="incgrenade" type="Node3D" unique_id=690403004]
+metadata/weapon_id = "incgrenade"
+metadata/category = "grenade"
+metadata/muzzle = [0.0, 0.0, 0.0]
+metadata/original_art = true
+
+[node name="Model" type="Node3D" parent="." unique_id=2127585421]
+
+[node name="Sculpture" type="MeshInstance3D" parent="Model" unique_id=1077109407]
+mesh = ExtResource("1_hhtv7")
+
+[node name="Muzzle" type="Node3D" parent="." unique_id=478449010]

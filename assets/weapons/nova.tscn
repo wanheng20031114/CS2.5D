@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://assets/weapons/nova_Model.res" id="1_niwka"]
+
+[node name="nova" type="Node3D" unique_id=1660442109]
+metadata/weapon_id = "nova"
+metadata/category = "shotgun"
+metadata/muzzle = [0.0, 0.08, -0.805]
+metadata/original_art = true
+
+[node name="Model" type="Node3D" parent="." unique_id=1519624403]
+
+[node name="Sculpture" type="MeshInstance3D" parent="Model" unique_id=862030991]
+mesh = ExtResource("1_niwka")
+
+[node name="Muzzle" type="Node3D" parent="." unique_id=1039028259]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08, -0.805)

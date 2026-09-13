@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://assets/weapons/g3sg1_Model.res" id="1_pnf5r"]
+
+[node name="g3sg1" type="Node3D" unique_id=1265686675]
+metadata/weapon_id = "g3sg1"
+metadata/category = "sniper"
+metadata/muzzle = [0.0, 0.082, -0.973]
+metadata/original_art = true
+
+[node name="Model" type="Node3D" parent="." unique_id=1814849548]
+
+[node name="Sculpture" type="MeshInstance3D" parent="Model" unique_id=1396976166]
+mesh = ExtResource("1_pnf5r")
+
+[node name="Muzzle" type="Node3D" parent="." unique_id=1765851976]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.082, -0.973)

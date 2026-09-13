@@ -1,0 +1,16 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://assets/weapons/kit_Model.res" id="1_71u5f"]
+
+[node name="kit" type="Node3D" unique_id=1387276177]
+metadata/weapon_id = "kit"
+metadata/category = "gear"
+metadata/muzzle = [0.0, 0.0, 0.0]
+metadata/original_art = true
+
+[node name="Model" type="Node3D" parent="." unique_id=1754234464]
+
+[node name="Sculpture" type="MeshInstance3D" parent="Model" unique_id=1010475227]
+mesh = ExtResource("1_71u5f")
+
+[node name="Muzzle" type="Node3D" parent="." unique_id=1278252093]

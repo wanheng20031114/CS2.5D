@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://assets/weapons/negev_Model.res" id="1_41fex"]
+
+[node name="negev" type="Node3D" unique_id=420438541]
+metadata/weapon_id = "negev"
+metadata/category = "machinegun"
+metadata/muzzle = [0.0, 0.082, -0.7030000000000001]
+metadata/original_art = true
+
+[node name="Model" type="Node3D" parent="." unique_id=1842224653]
+
+[node name="Sculpture" type="MeshInstance3D" parent="Model" unique_id=1494907149]
+mesh = ExtResource("1_41fex")
+
+[node name="Muzzle" type="Node3D" parent="." unique_id=980630688]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.082, -0.703)

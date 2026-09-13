@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://assets/weapons/ssg08_Model.res" id="1_hgqxc"]
+
+[node name="ssg08" type="Node3D" unique_id=661292193]
+metadata/weapon_id = "ssg08"
+metadata/category = "sniper"
+metadata/muzzle = [0.0, 0.082, -0.8430000000000001]
+metadata/original_art = true
+
+[node name="Model" type="Node3D" parent="." unique_id=1872282360]
+
+[node name="Sculpture" type="MeshInstance3D" parent="Model" unique_id=886989402]
+mesh = ExtResource("1_hgqxc")
+
+[node name="Muzzle" type="Node3D" parent="." unique_id=771612910]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.082, -0.843)

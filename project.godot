@@ -1,0 +1,73 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="MIRAGE · CS2.5D"
+run/main_scene="res://scenes/main.tscn"
+config/features=PackedStringArray("4.6", "Forward Plus")
+run/flush_stdout_on_print=true
+config/icon="res://assets/icon.svg"
+
+[display]
+
+window/size/viewport_width=1600
+window/size/viewport_height=900
+window/size/window_width_override=1440
+window/size/window_height_override=810
+window/stretch/mode="canvas_items"
+
+[layer_names]
+
+3d_physics/layer_1="Architecture"
+3d_physics/layer_2="Combatants"
+3d_physics/layer_3="Player clip"
+3d_physics/layer_4="Grenade clip"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality=3
+anti_aliasing/quality/msaa_3d=2
+environment/defaults/default_clear_color=Color(0.63, 0.71, 0.76, 1)
+
+[shader_globals]
+
+view_player={
+"type": "vec3",
+"value": Vector3(0, 0, 0)
+}
+view_camera={
+"type": "vec3",
+"value": Vector3(0, 30, 20)
+}
+view_camera_direction={
+"type": "vec3",
+"value": Vector3(-0.258, -0.851, -0.465)
+}
+view_facing={
+"type": "vec2",
+"value": Vector2(0, -1)
+}
+view_radius={
+"type": "float",
+"value": 42.0
+}
+view_cone_cos={
+"type": "float",
+"value": 0.12
+}
+view_cutaway={
+"type": "float",
+"value": 0.0
+}

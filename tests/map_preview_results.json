@@ -1,0 +1,145 @@
+{
+	"checks": [
+		{
+			"id": "menu_has_map_preview_entry",
+			"passed": true
+		},
+		{
+			"id": "real_menu_click_enters_model_viewer",
+			"passed": true
+		},
+		{
+			"id": "viewer_hides_combat_ui",
+			"passed": true
+		},
+		{
+			"id": "viewer_uses_original_world",
+			"passed": true
+		},
+		{
+			"id": "whole_model_disables_visibility",
+			"passed": true
+		},
+		{
+			"id": "preview_clears_previous_flash_overlay",
+			"passed": true
+		},
+		{
+			"id": "preview_shadow_distance_covers_inspection_camera",
+			"passed": true
+		},
+		{
+			"id": "viewer_starts_orthographic",
+			"passed": true
+		},
+		{
+			"id": "whole_map_framing",
+			"passed": true
+		},
+		{
+			"id": "left_drag_orbits_model",
+			"passed": true
+		},
+		{
+			"id": "release_over_toolbar_does_not_leave_stuck_orbit",
+			"passed": true
+		},
+		{
+			"id": "right_drag_pans_model",
+			"passed": true
+		},
+		{
+			"id": "middle_drag_pans_model",
+			"passed": true
+		},
+		{
+			"id": "wheel_zoom_in",
+			"passed": true
+		},
+		{
+			"id": "reset_restores_overview",
+			"passed": true
+		},
+		{
+			"id": "landmark_button_focuses_A",
+			"passed": true
+		},
+		{
+			"id": "landmark_button_focuses_B",
+			"passed": true
+		},
+		{
+			"id": "landmark_button_focuses_MID",
+			"passed": true
+		},
+		{
+			"id": "landmark_button_focuses_CT",
+			"passed": true
+		},
+		{
+			"id": "landmark_button_focuses_T",
+			"passed": true
+		},
+		{
+			"id": "perspective_toggle",
+			"passed": true
+		},
+		{
+			"id": "projection_toggle_preserves_target_scale",
+			"passed": true
+		},
+		{
+			"id": "orthographic_toggle",
+			"passed": true
+		},
+		{
+			"id": "zoom_cannot_cross_model_or_go_negative",
+			"passed": true
+		},
+		{
+			"id": "zoom_out_is_bounded",
+			"passed": true
+		},
+		{
+			"id": "Home_resets_view",
+			"passed": true
+		},
+		{
+			"id": "Escape_returns_to_menu",
+			"passed": true
+		},
+		{
+			"id": "camera_range_restored_on_exit",
+			"passed": true
+		},
+		{
+			"id": "shadow_range_restored_on_exit",
+			"passed": true
+		},
+		{
+			"id": "toolbar_return_restores_menu",
+			"passed": true
+		},
+		{
+			"id": "perspective_exit_restores_original_projection",
+			"passed": true
+		},
+		{
+			"id": "game_starts_normally_after_viewer",
+			"passed": true
+		},
+		{
+			"id": "combat_camera_and_visibility_restore",
+			"passed": true
+		}
+	],
+	"failed": 0,
+	"gpu": "NVIDIA GeForce RTX 3080",
+	"native_input": true,
+	"passed": 33,
+	"render_method": "forward_plus",
+	"viewport": [
+		1440,
+		810
+	]
+}

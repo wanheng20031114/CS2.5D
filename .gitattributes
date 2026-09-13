@@ -1,0 +1,11 @@
+* text=auto
+*.gd text eol=lf
+*.gdshader text eol=lf
+*.tscn text eol=lf
+*.godot text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.ps1 text eol=crlf
+*.glb filter=lfs diff=lfs merge=lfs -text
+# Preserve the byte-for-byte upstream data snapshot and its recorded hash.
+assets/weapons/source/weapons.vdata -text

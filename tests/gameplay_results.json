@@ -1,0 +1,370 @@
+{
+	"checks": [
+		{
+			"detail": null,
+			"name": "practice_has_training_funds_and_armor",
+			"passed": true
+		},
+		{
+			"detail": {
+				"armor": 0.0,
+				"helmet": false,
+				"kit": false,
+				"loadout": [
+					"",
+					"glock",
+					"knife",
+					""
+				],
+				"money": 800,
+				"supplies": {
+
+				}
+			},
+			"name": "new_match_does_not_inherit_other_team_practice_equipment",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "bomb_starts_5v5",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "spawn_buy_window_allows_purchases",
+			"passed": true
+		},
+		{
+			"detail": {
+				"armor": 100.0,
+				"money": 150
+			},
+			"name": "armor_costs_650",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "duplicate_full_armor_does_not_charge",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "insufficient_funds_rejects_helmet_upgrade",
+			"passed": true
+		},
+		{
+			"detail": 650,
+			"name": "full_armor_helmet_upgrade_costs_350",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "duplicate_full_armor_helmet_does_not_charge",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "CT_cannot_buy_T_AK",
+			"passed": true
+		},
+		{
+			"detail": {
+				"money": 13100,
+				"weapon": "m4a1"
+			},
+			"name": "M4A4_price_and_equipping",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "duplicate_equipped_weapon_does_not_charge",
+			"passed": true
+		},
+		{
+			"detail": [
+				"m4a1",
+				"usp_silencer",
+				"knife",
+				""
+			],
+			"name": "knife_is_not_a_free_primary_shop_purchase",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "CT_defuse_kit_costs_400",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "duplicate_defuse_kit_does_not_charge",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "flashbang_limit_two",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "same_grenade_limit_one",
+			"passed": true
+		},
+		{
+			"detail": {
+				"flashbang": 2,
+				"hegrenade": 1,
+				"smokegrenade": 1
+			},
+			"name": "grenade_total_capacity_four",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "CT_cannot_buy_T_molotov",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "purchase_requires_spawn_area",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "purchase_requires_live_buy_timer",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "partial_magazine_starts_reload",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "cannot_fire_during_reload",
+			"passed": true
+		},
+		{
+			"detail": {
+				"mag": 30,
+				"reserve": 27
+			},
+			"name": "reload_preserves_total_ammunition",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "cannot_reload_full_magazine",
+			"passed": true
+		},
+		{
+			"detail": {
+				"mag": 11,
+				"reserve": 0
+			},
+			"name": "limited_reserve_transfers_only_remaining_ammo",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "cannot_reload_without_reserve",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "switching_weapon_cancels_reload_without_ammo_transfer",
+			"passed": true
+		},
+		{
+			"detail": {
+				"drop_id": "glock",
+				"drops": 1,
+				"loadout": [
+					"ak47",
+					"",
+					"knife",
+					""
+				]
+			},
+			"name": "dropping_secondary_keeps_primary_and_drops_actual_secondary",
+			"passed": true
+		},
+		{
+			"detail": {
+				"mag": 3,
+				"reserve": 11
+			},
+			"name": "pickup_preserves_secondary_ammunition",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "native_physics_clear_line_of_sight",
+			"passed": true
+		},
+		{
+			"detail": 64.9107642992805,
+			"name": "clear_shot_damages_enemy",
+			"passed": true
+		},
+		{
+			"detail": {
+				"mag": 29,
+				"reserve": 90
+			},
+			"name": "one_shot_consumes_one_round",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "front_clear_enemy_visible",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "native_wall_blocks_line_of_sight",
+			"passed": true
+		},
+		{
+			"detail": {
+				"ammo": 28,
+				"health": 100.0
+			},
+			"name": "wall_blocks_bullet_but_round_is_consumed",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "wall_occluded_enemy_hidden",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "enemy_behind_player_hidden",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "smoke_blocks_enemy_visibility",
+			"passed": true
+		},
+		{
+			"detail": {
+				"east_range_normalized": 0.0,
+				"visible": false
+			},
+			"name": "inside_smoke_visibility_ranges_are_blocked",
+			"passed": true
+		},
+		{
+			"detail": {
+				"aimed": 2.45099997520447,
+				"normal": 5.69999980926514,
+				"stopped": 0.0
+			},
+			"name": "native_movement_ADS_slows_and_release_stops",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "eliminating_T_before_plant_awards_CT",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "eliminating_T_after_plant_does_not_end_round",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "dead_combatant_tick_advances_collapse_animation",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "eliminating_CT_awards_T_even_after_plant",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "moving_interrupts_plant",
+			"passed": true
+		},
+		{
+			"detail": {
+				"planted": true,
+				"timer": 40.0
+			},
+			"name": "stationary_carrier_plants_at_A_site",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "kit_defuse_requires_full_five_seconds",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "kit_defuses_after_five_seconds",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "no_kit_defuse_requires_full_ten_seconds",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "no_kit_defuses_after_ten_seconds",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "bomb_expiration_awards_T",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "round_timeout_without_plant_awards_CT",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "practice_death_queues_respawn_without_round_end",
+			"passed": true
+		},
+		{
+			"detail": {
+				"actors": 4,
+				"alive_T": 3
+			},
+			"name": "practice_enemy_respawns_without_accumulating_actors",
+			"passed": true
+		}
+	],
+	"date": "2026-09-13T04:01:56",
+	"duration_ms": 3255,
+	"failures": [],
+	"files_sha256": {
+		"catalog": "841cc3d21b68ce6c9ff9d3bfd90aa61daf62bfde6ccd496c46367d8241d4d7f9",
+		"combatant": "edf4757bb1bdd276c8ece9e16c31292c291ba1cc1d7f6c012cee88665964fae0",
+		"main": "76e24335f4f3c00857b88972bd6b955ff8da317db307c408dfbc44669ff6cdb7"
+	},
+	"godot": "4.6.3-stable (official)",
+	"limitations": [
+		"Headless gameplay/physics integration; no rendered pixels or subjective input-feel assessment.",
+		"Isolated collision arena is added outside the map to distinguish gameplay ray logic from map authoring.",
+		"Player input is not synthesized; movement/combat/shop/bomb actions call actual scene methods.",
+		"Equipment price expectations track the retained Valve snapshot, not live network data."
+	],
+	"observations": {
+		"physics_arena": {
+			"actor_layer": 2,
+			"ads_speed": 2.45099997520447,
+			"collision_layer": 1,
+			"normal_speed": 5.69999980926514,
+			"position": "(1000.0, 0.06, 1000.0)"
+		}
+	},
+	"scene": "res://scenes/main.tscn"
+}

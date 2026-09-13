@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://assets/weapons/aug_Model.res" id="1_uqwcd"]
+
+[node name="aug" type="Node3D" unique_id=1542573232]
+metadata/weapon_id = "aug"
+metadata/category = "rifle"
+metadata/muzzle = [0.0, 0.082, -0.683]
+metadata/original_art = true
+
+[node name="Model" type="Node3D" parent="." unique_id=1455787971]
+
+[node name="Sculpture" type="MeshInstance3D" parent="Model" unique_id=693765097]
+mesh = ExtResource("1_uqwcd")
+
+[node name="Muzzle" type="Node3D" parent="." unique_id=715877376]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.082, -0.683)

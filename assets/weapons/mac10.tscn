@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://assets/weapons/mac10_Model.res" id="1_u33j1"]
+
+[node name="mac10" type="Node3D" unique_id=369745401]
+metadata/weapon_id = "mac10"
+metadata/category = "smg"
+metadata/muzzle = [0.0, 0.077, -0.389]
+metadata/original_art = true
+
+[node name="Model" type="Node3D" parent="." unique_id=461623608]
+
+[node name="Sculpture" type="MeshInstance3D" parent="Model" unique_id=1486025463]
+mesh = ExtResource("1_u33j1")
+
+[node name="Muzzle" type="Node3D" parent="." unique_id=326127838]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.077, -0.389)

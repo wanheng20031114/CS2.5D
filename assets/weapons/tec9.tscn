@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://assets/weapons/tec9_Model.res" id="1_p8sip"]
+
+[node name="tec9" type="Node3D" unique_id=337323149]
+metadata/weapon_id = "tec9"
+metadata/category = "pistol"
+metadata/muzzle = [0.0, 0.063, -0.342]
+metadata/original_art = true
+
+[node name="Model" type="Node3D" parent="." unique_id=595175836]
+
+[node name="Sculpture" type="MeshInstance3D" parent="Model" unique_id=1068424936]
+mesh = ExtResource("1_p8sip")
+
+[node name="Muzzle" type="Node3D" parent="." unique_id=163448953]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.063, -0.342)

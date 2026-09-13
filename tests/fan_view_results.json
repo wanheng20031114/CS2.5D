@@ -1,0 +1,558 @@
+{
+	"checks": [
+		{
+			"detail": null,
+			"name": "native_rendering_available",
+			"passed": true
+		},
+		{
+			"detail": [
+				"(1.0, 0.2784, 0.2196, 1.0)",
+				"(1.0, 0.2667, 0.2118, 1.0)",
+				"(1.0, 0.2745, 0.2196, 1.0)"
+			],
+			"name": "A_180_unclipped_probes_visible",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "A_180_whole_fan_clears_roof_18m_away",
+			"passed": true
+		},
+		{
+			"detail": "(1.0, 0.2667, 0.2118, 1.0)",
+			"name": "A_180_outside_fan_roof_retained",
+			"passed": true
+		},
+		{
+			"detail": "(1.0, 0.2745, 0.2196, 1.0)",
+			"name": "A_180_low_cover_retained",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "A_180_wide_left_fan_cleared",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "A_180_wide_right_fan_cleared",
+			"passed": true
+		},
+		{
+			"detail": "(1.0, 0.2784, 0.2196, 1.0)",
+			"name": "A_180_turn_restores_previous_front_roof",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "A_180_turn_clears_new_front_roof",
+			"passed": true
+		},
+		{
+			"detail": [
+				"(1.0, 0.2627, 0.2078, 1.0)",
+				"(1.0, 0.2824, 0.2235, 1.0)",
+				"(1.0, 0.2667, 0.2118, 1.0)"
+			],
+			"name": "A_90_unclipped_probes_visible",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "A_90_whole_fan_clears_roof_18m_away",
+			"passed": true
+		},
+		{
+			"detail": "(1.0, 0.2824, 0.2235, 1.0)",
+			"name": "A_90_outside_fan_roof_retained",
+			"passed": true
+		},
+		{
+			"detail": "(1.0, 0.2667, 0.2118, 1.0)",
+			"name": "A_90_low_cover_retained",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "A_90_wide_left_fan_cleared",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "A_90_wide_right_fan_cleared",
+			"passed": true
+		},
+		{
+			"detail": "(1.0, 0.2627, 0.2078, 1.0)",
+			"name": "A_90_turn_restores_previous_front_roof",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "A_90_turn_clears_new_front_roof",
+			"passed": true
+		},
+		{
+			"detail": [
+				"(1.0, 0.2667, 0.2118, 1.0)",
+				"(1.0, 0.2784, 0.2196, 1.0)",
+				"(1.0, 0.2706, 0.2118, 1.0)"
+			],
+			"name": "A_0_unclipped_probes_visible",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "A_0_whole_fan_clears_roof_18m_away",
+			"passed": true
+		},
+		{
+			"detail": "(1.0, 0.2784, 0.2196, 1.0)",
+			"name": "A_0_outside_fan_roof_retained",
+			"passed": true
+		},
+		{
+			"detail": "(1.0, 0.2706, 0.2118, 1.0)",
+			"name": "A_0_low_cover_retained",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "A_0_wide_left_fan_cleared",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "A_0_wide_right_fan_cleared",
+			"passed": true
+		},
+		{
+			"detail": "(1.0, 0.2667, 0.2118, 1.0)",
+			"name": "A_0_turn_restores_previous_front_roof",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "A_0_turn_clears_new_front_roof",
+			"passed": true
+		},
+		{
+			"detail": [
+				"(1.0, 0.2824, 0.2235, 1.0)",
+				"(1.0, 0.2627, 0.2078, 1.0)",
+				"(1.0, 0.2784, 0.2196, 1.0)"
+			],
+			"name": "A_-90_unclipped_probes_visible",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "A_-90_whole_fan_clears_roof_18m_away",
+			"passed": true
+		},
+		{
+			"detail": "(1.0, 0.2627, 0.2078, 1.0)",
+			"name": "A_-90_outside_fan_roof_retained",
+			"passed": true
+		},
+		{
+			"detail": "(1.0, 0.2784, 0.2196, 1.0)",
+			"name": "A_-90_low_cover_retained",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "A_-90_wide_left_fan_cleared",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "A_-90_wide_right_fan_cleared",
+			"passed": true
+		},
+		{
+			"detail": "(1.0, 0.2824, 0.2235, 1.0)",
+			"name": "A_-90_turn_restores_previous_front_roof",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "A_-90_turn_clears_new_front_roof",
+			"passed": true
+		},
+		{
+			"detail": {
+				"projected_floor": "(-1.36096, 2.062, 21.16138)",
+				"roof": "(6.76404, 28.062, 34.97387)"
+			},
+			"name": "A_foreground_probe_projects_over_distant_front_ground",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "A_foreground_probe_blocks_ground_without_cutaway",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "A_projected_camera_obstruction_removed",
+			"passed": true
+		},
+		{
+			"detail": {
+				"blocked": "(-1.75, 2.3368, 18.25)",
+				"clear": "(1.75, 2.3368, 16.75)",
+				"observer": "(5.75, 2.062, 33.25)"
+			},
+			"name": "A_real_source_map_has_clear_and_obstructed_actor_positions",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "A_unobstructed_forward_enemy_visible",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "A_enemy_behind_facing_hidden",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "A_source_wall_still_hides_enemy_with_cutaway_enabled",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "A_source_wall_collision_remains_after_cutaway",
+			"passed": true
+		},
+		{
+			"detail": [
+				"(1.0, 0.2784, 0.2196, 1.0)",
+				"(1.0, 0.2667, 0.2118, 1.0)",
+				"(1.0, 0.2745, 0.2196, 1.0)"
+			],
+			"name": "B_180_unclipped_probes_visible",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "B_180_whole_fan_clears_roof_18m_away",
+			"passed": true
+		},
+		{
+			"detail": "(1.0, 0.2667, 0.2118, 1.0)",
+			"name": "B_180_outside_fan_roof_retained",
+			"passed": true
+		},
+		{
+			"detail": "(1.0, 0.2745, 0.2196, 1.0)",
+			"name": "B_180_low_cover_retained",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "B_180_wide_left_fan_cleared",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "B_180_wide_right_fan_cleared",
+			"passed": true
+		},
+		{
+			"detail": "(1.0, 0.2819, 0.2235, 1.0)",
+			"name": "B_180_turn_restores_previous_front_roof",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "B_180_turn_clears_new_front_roof",
+			"passed": true
+		},
+		{
+			"detail": [
+				"(1.0, 0.2627, 0.2078, 1.0)",
+				"(1.0, 0.2863, 0.2235, 1.0)",
+				"(1.0, 0.2706, 0.2118, 1.0)"
+			],
+			"name": "B_90_unclipped_probes_visible",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "B_90_whole_fan_clears_roof_18m_away",
+			"passed": true
+		},
+		{
+			"detail": "(1.0, 0.2863, 0.2235, 1.0)",
+			"name": "B_90_outside_fan_roof_retained",
+			"passed": true
+		},
+		{
+			"detail": "(1.0, 0.2706, 0.2118, 1.0)",
+			"name": "B_90_low_cover_retained",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "B_90_wide_left_fan_cleared",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "B_90_wide_right_fan_cleared",
+			"passed": true
+		},
+		{
+			"detail": "(1.0, 0.2627, 0.2078, 1.0)",
+			"name": "B_90_turn_restores_previous_front_roof",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "B_90_turn_clears_new_front_roof",
+			"passed": true
+		},
+		{
+			"detail": [
+				"(1.0, 0.2667, 0.2118, 1.0)",
+				"(1.0, 0.2819, 0.2235, 1.0)",
+				"(1.0, 0.2706, 0.2157, 1.0)"
+			],
+			"name": "B_0_unclipped_probes_visible",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "B_0_whole_fan_clears_roof_18m_away",
+			"passed": true
+		},
+		{
+			"detail": "(1.0, 0.2819, 0.2235, 1.0)",
+			"name": "B_0_outside_fan_roof_retained",
+			"passed": true
+		},
+		{
+			"detail": "(1.0, 0.2706, 0.2157, 1.0)",
+			"name": "B_0_low_cover_retained",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "B_0_wide_left_fan_cleared",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "B_0_wide_right_fan_cleared",
+			"passed": true
+		},
+		{
+			"detail": "(1.0, 0.2667, 0.2118, 1.0)",
+			"name": "B_0_turn_restores_previous_front_roof",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "B_0_turn_clears_new_front_roof",
+			"passed": true
+		},
+		{
+			"detail": [
+				"(1.0, 0.2824, 0.2235, 1.0)",
+				"(1.0, 0.2627, 0.2078, 1.0)",
+				"(1.0, 0.2784, 0.2196, 1.0)"
+			],
+			"name": "B_-90_unclipped_probes_visible",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "B_-90_whole_fan_clears_roof_18m_away",
+			"passed": true
+		},
+		{
+			"detail": "(1.0, 0.2627, 0.2078, 1.0)",
+			"name": "B_-90_outside_fan_roof_retained",
+			"passed": true
+		},
+		{
+			"detail": "(1.0, 0.2784, 0.2196, 1.0)",
+			"name": "B_-90_low_cover_retained",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "B_-90_wide_left_fan_cleared",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "B_-90_wide_right_fan_cleared",
+			"passed": true
+		},
+		{
+			"detail": "(1.0, 0.2863, 0.2235, 1.0)",
+			"name": "B_-90_turn_restores_previous_front_roof",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "B_-90_turn_clears_new_front_roof",
+			"passed": true
+		},
+		{
+			"detail": {
+				"projected_floor": "(-42.36096, 2.57, -40.33863)",
+				"roof": "(-34.23596, 28.57, -26.52613)"
+			},
+			"name": "B_foreground_probe_projects_over_distant_front_ground",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "B_foreground_probe_blocks_ground_without_cutaway",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "B_projected_camera_obstruction_removed",
+			"passed": true
+		},
+		{
+			"detail": {
+				"blocked": "(-38.75, 3.0601, -38.25)",
+				"clear": "(-37.75, 3.2544, -40.75)",
+				"observer": "(-35.25, 2.57, -28.25)"
+			},
+			"name": "B_real_source_map_has_clear_and_obstructed_actor_positions",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "B_unobstructed_forward_enemy_visible",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "B_enemy_behind_facing_hidden",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "B_source_wall_still_hides_enemy_with_cutaway_enabled",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "B_source_wall_collision_remains_after_cutaway",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Architecture_category_probe_visible_before_cutaway",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "Architecture_material_participates_in_fan_cutaway",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Props_category_probe_visible_before_cutaway",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "Props_material_participates_in_fan_cutaway",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "PropsMetal_category_probe_visible_before_cutaway",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "PropsMetal_material_participates_in_fan_cutaway",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Canopy_category_probe_visible_before_cutaway",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "Canopy_material_participates_in_fan_cutaway",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Foliage_category_probe_visible_before_cutaway",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "Foliage_material_participates_in_fan_cutaway",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "Ground_category_probe_visible_before_cutaway",
+			"passed": true
+		},
+		{
+			"detail": "(0.9922, 0.1725, 0.1725, 1.0)",
+			"name": "Ground_ground_not_clipped",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "spectator_uses_alive_teammate",
+			"passed": true
+		},
+		{
+			"detail": "(0.0353, 0.9922, 0.0353, 1.0)",
+			"name": "spectator_fan_tracks_teammate_position_and_facing",
+			"passed": true
+		},
+		{
+			"detail": "(1.0, 0.2627, 0.2078, 1.0)",
+			"name": "spectator_preserves_outside_teammate_fan",
+			"passed": true
+		}
+	],
+	"date_utc": "2026-09-13T03:55:55",
+	"duration_ms": 8999,
+	"engine": "4.6.3-stable (official)",
+	"failures": [],
+	"gpu": "NVIDIA GeForce RTX 3080",
+	"limitations": [
+		"Colored GPU probes temporarily hide map visuals to isolate clipping; original map physics remain loaded.",
+		"A/B LOS checks and gameplay screenshots restore the actual map geometry.",
+		"Tests drive actual main methods deterministically, without synthesizing mouse input."
+	],
+	"observations": {
+		"A_source_positions": {
+			"blocked_enemy": "(-1.75, 2.3368, 18.25)",
+			"clear_enemy": "(1.75, 2.3368, 16.75)",
+			"observer": "(5.75, 2.062, 33.25)"
+		},
+		"B_source_positions": {
+			"blocked_enemy": "(-38.75, 3.0601, -38.25)",
+			"clear_enemy": "(-37.75, 3.2544, -40.75)",
+			"observer": "(-35.25, 2.57, -28.25)"
+		}
+	},
+	"render_method": "forward_plus",
+	"sha256": {
+		"main": "8055f325d419281d355a6f15ea1623f8c724e4d60a310b8df6b8344487908927",
+		"map": "35759720b84b3294035cc6ba8f85d96bcd418a3f763b006c4664f4e7a5d37335",
+		"shader": "7f5cc7265ee9be266c16ed59574a8b8eeb363f55a63604bf91ad8abbef1b04f7"
+	}
+}

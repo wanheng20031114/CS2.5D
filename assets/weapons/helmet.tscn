@@ -1,0 +1,16 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://assets/weapons/helmet_Model.res" id="1_0xs5t"]
+
+[node name="helmet" type="Node3D" unique_id=277617145]
+metadata/weapon_id = "helmet"
+metadata/category = "gear"
+metadata/muzzle = [0.0, 0.0, 0.0]
+metadata/original_art = true
+
+[node name="Model" type="Node3D" parent="." unique_id=2034928612]
+
+[node name="Sculpture" type="MeshInstance3D" parent="Model" unique_id=1694208240]
+mesh = ExtResource("1_0xs5t")
+
+[node name="Muzzle" type="Node3D" parent="." unique_id=582918987]

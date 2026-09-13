@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://assets/weapons/glock_Model.res" id="1_7p355"]
+
+[node name="glock" type="Node3D" unique_id=1818776365]
+metadata/weapon_id = "glock"
+metadata/category = "pistol"
+metadata/muzzle = [0.0, 0.063, -0.202]
+metadata/original_art = true
+
+[node name="Model" type="Node3D" parent="." unique_id=970823171]
+
+[node name="Sculpture" type="MeshInstance3D" parent="Model" unique_id=1452386992]
+mesh = ExtResource("1_7p355")
+
+[node name="Muzzle" type="Node3D" parent="." unique_id=1330969946]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.063, -0.202)

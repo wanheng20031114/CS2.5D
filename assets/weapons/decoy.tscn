@@ -1,0 +1,16 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://assets/weapons/decoy_Model.res" id="1_eegau"]
+
+[node name="decoy" type="Node3D" unique_id=1507137218]
+metadata/weapon_id = "decoy"
+metadata/category = "grenade"
+metadata/muzzle = [0.0, 0.0, 0.0]
+metadata/original_art = true
+
+[node name="Model" type="Node3D" parent="." unique_id=422326003]
+
+[node name="Sculpture" type="MeshInstance3D" parent="Model" unique_id=312822915]
+mesh = ExtResource("1_eegau")
+
+[node name="Muzzle" type="Node3D" parent="." unique_id=515274633]

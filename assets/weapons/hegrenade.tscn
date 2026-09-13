@@ -1,0 +1,16 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://assets/weapons/hegrenade_Model.res" id="1_uwfa5"]
+
+[node name="hegrenade" type="Node3D" unique_id=709353079]
+metadata/weapon_id = "hegrenade"
+metadata/category = "grenade"
+metadata/muzzle = [0.0, 0.0, 0.0]
+metadata/original_art = true
+
+[node name="Model" type="Node3D" parent="." unique_id=1849879975]
+
+[node name="Sculpture" type="MeshInstance3D" parent="Model" unique_id=527121521]
+mesh = ExtResource("1_uwfa5")
+
+[node name="Muzzle" type="Node3D" parent="." unique_id=1366474614]

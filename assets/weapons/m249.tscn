@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://assets/weapons/m249_Model.res" id="1_v7k4u"]
+
+[node name="m249" type="Node3D" unique_id=775798382]
+metadata/weapon_id = "m249"
+metadata/category = "machinegun"
+metadata/muzzle = [0.0, 0.082, -0.7030000000000001]
+metadata/original_art = true
+
+[node name="Model" type="Node3D" parent="." unique_id=1454288408]
+
+[node name="Sculpture" type="MeshInstance3D" parent="Model" unique_id=105954845]
+mesh = ExtResource("1_v7k4u")
+
+[node name="Muzzle" type="Node3D" parent="." unique_id=592905373]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.082, -0.703)

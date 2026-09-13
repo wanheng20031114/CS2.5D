@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://assets/weapons/knife_Model.res" id="1_dscao"]
+
+[node name="knife" type="Node3D" unique_id=660459437]
+metadata/weapon_id = "knife"
+metadata/category = "melee"
+metadata/muzzle = [0.0, 0.0, -0.4]
+metadata/original_art = true
+
+[node name="Model" type="Node3D" parent="." unique_id=233142600]
+
+[node name="Sculpture" type="MeshInstance3D" parent="Model" unique_id=1548256787]
+mesh = ExtResource("1_dscao")
+
+[node name="Muzzle" type="Node3D" parent="." unique_id=1013847291]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.4)

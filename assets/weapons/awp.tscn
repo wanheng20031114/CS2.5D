@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://assets/weapons/awp_Model.res" id="1_aojpf"]
+
+[node name="awp" type="Node3D" unique_id=2065110893]
+metadata/weapon_id = "awp"
+metadata/category = "sniper"
+metadata/muzzle = [0.0, 0.082, -0.993]
+metadata/original_art = true
+
+[node name="Model" type="Node3D" parent="." unique_id=1638197143]
+
+[node name="Sculpture" type="MeshInstance3D" parent="Model" unique_id=618893075]
+mesh = ExtResource("1_aojpf")
+
+[node name="Muzzle" type="Node3D" parent="." unique_id=513698277]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.082, -0.993)

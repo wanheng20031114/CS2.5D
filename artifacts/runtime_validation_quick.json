@@ -1,0 +1,163 @@
+{
+	"checks": [
+		{
+			"name": "menu_visible_on_boot",
+			"passed": true
+		},
+		{
+			"name": "practice_button_changes_mode",
+			"passed": true
+		},
+		{
+			"name": "CT_practice_starts_from_real_menu_button",
+			"passed": true
+		},
+		{
+			"name": "CT_practice_has_three_enemy_bots",
+			"passed": true
+		},
+		{
+			"name": "B_opens_shop",
+			"passed": true
+		},
+		{
+			"name": "available_pistol_button_enabled",
+			"passed": true
+		},
+		{
+			"name": "purchase_deducts_exact_catalog_price",
+			"passed": true
+		},
+		{
+			"name": "purchase_equips_pistol",
+			"passed": true
+		},
+		{
+			"name": "wrong_team_weapon_disabled",
+			"passed": true
+		},
+		{
+			"name": "helmet_upgrade_349_dollars_disabled",
+			"passed": true
+		},
+		{
+			"name": "helmet_upgrade_350_dollars_enabled",
+			"passed": true
+		},
+		{
+			"name": "helmet_upgrade_350_displays_350_price",
+			"passed": true
+		},
+		{
+			"name": "helmet_upgrade_350_native_click_deducts_350",
+			"passed": true
+		},
+		{
+			"name": "helmet_upgrade_799_dollars_enabled",
+			"passed": true
+		},
+		{
+			"name": "helmet_upgrade_799_displays_350_price",
+			"passed": true
+		},
+		{
+			"name": "helmet_upgrade_799_native_click_deducts_350",
+			"passed": true
+		},
+		{
+			"name": "helmet_upgrade_999_dollars_enabled",
+			"passed": true
+		},
+		{
+			"name": "helmet_upgrade_999_displays_350_price",
+			"passed": true
+		},
+		{
+			"name": "helmet_upgrade_999_native_click_deducts_350",
+			"passed": true
+		},
+		{
+			"name": "B_closes_shop",
+			"passed": true
+		},
+		{
+			"name": "Tab_opens_inventory",
+			"passed": true
+		},
+		{
+			"name": "inventory_primary_button_equips_slot0",
+			"passed": true
+		},
+		{
+			"name": "grenade_inventory_not_invalid_equip_button",
+			"passed": true
+		},
+		{
+			"name": "Escape_closes_inventory_without_pausing",
+			"passed": true
+		},
+		{
+			"name": "Escape_opens_pause",
+			"passed": true
+		},
+		{
+			"name": "continue_button_resumes",
+			"passed": true
+		},
+		{
+			"name": "settings_open_from_pause",
+			"passed": true
+		},
+		{
+			"name": "settings_done_resumes_paused_game",
+			"passed": true
+		},
+		{
+			"name": "return_menu_button",
+			"passed": true
+		},
+		{
+			"name": "T_practice_starts_from_real_menu_button",
+			"passed": true
+		},
+		{
+			"name": "T_shop_buy_rifle_uses_price_and_loadout",
+			"passed": true
+		},
+		{
+			"name": "shop_close_button_returns_gameplay",
+			"passed": true
+		}
+	],
+	"cpu": "Intel(R) Core(TM) i9-10900KF CPU @ 3.70GHz",
+	"engine": "4.6.3-stable (official)",
+	"failed": 0,
+	"finished_utc": "2026-09-13T04:03:19",
+	"gpu": "NVIDIA GeForce RTX 3080",
+	"map_assets": {
+		"res://assets/map/mirage_baked.tscn": {
+			"bytes": 11942264,
+			"modified_unix": 1789267041
+		},
+		"res://assets/map/navigation.json": {
+			"bytes": 1272141,
+			"modified_unix": 1789267066
+		},
+		"res://assets/map/source_environment.glb": {
+			"bytes": 115171928,
+			"modified_unix": 1789268118
+		}
+	},
+	"os": "Windows",
+	"render_method": "forward_plus",
+	"started_utc": "2026-09-13T04:03:13",
+	"viewport_pixels": [
+		1600.0,
+		900.0
+	],
+	"vsync_mode": 1,
+	"window_pixels": [
+		1440,
+		810
+	]
+}

@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://assets/weapons/cz75a_Model.res" id="1_0lbe5"]
+
+[node name="cz75a" type="Node3D" unique_id=22014033]
+metadata/weapon_id = "cz75a"
+metadata/category = "pistol"
+metadata/muzzle = [0.0, 0.063, -0.232]
+metadata/original_art = true
+
+[node name="Model" type="Node3D" parent="." unique_id=372234306]
+
+[node name="Sculpture" type="MeshInstance3D" parent="Model" unique_id=1133228945]
+mesh = ExtResource("1_0lbe5")
+
+[node name="Muzzle" type="Node3D" parent="." unique_id=15387541]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.063, -0.232)

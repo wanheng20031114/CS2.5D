@@ -1,0 +1,1229 @@
+{
+  "round": 3,
+  "saw_combat": true,
+  "saw_damage": true,
+  "saw_plant": true,
+  "side": "CT",
+  "snapshots": [
+    {
+      "bomb": false,
+      "ct": 5,
+      "phase": "buy",
+      "round": 1,
+      "score_ct": 0,
+      "score_t": 0,
+      "seconds": 20,
+      "t": 5,
+      "units": [
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -28.0574817657471,
+            -0.27614438533783,
+            28.6928787231445
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -33.5050888061523,
+            -0.964482963085175,
+            24.5109996795654
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -33.3953170776367,
+            -0.938659369945526,
+            28.9813995361328
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -28.0598926544189,
+            -0.279776811599731,
+            24.2224540710449
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -31.5524559020996,
+            -0.554299294948578,
+            24.6126003265381
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            51.9683990478516,
+            2.23070454597473,
+            -13.792200088501
+          ],
+          "target": false,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            51.9694709777832,
+            2.23070740699768,
+            -16.242733001709
+          ],
+          "target": false,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            51.9683990478516,
+            2.23070454597473,
+            -18.6690006256104
+          ],
+          "target": false,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            51.9683990478516,
+            2.23070454597473,
+            -21.107400894165
+          ],
+          "target": false,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            49.9364013671875,
+            2.23070454597473,
+            -12.5729999542236
+          ],
+          "target": false,
+          "team": "T"
+        }
+      ]
+    },
+    {
+      "bomb": false,
+      "ct": 3,
+      "phase": "live",
+      "round": 1,
+      "score_ct": 0,
+      "score_t": 0,
+      "seconds": 40,
+      "t": 4,
+      "units": [
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -28.0231494903564,
+            -0.277089178562164,
+            28.7089004516602
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -34.7333183288574,
+            2.43390393257141,
+            -27.2843360900879
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": false,
+          "path": 0,
+          "position": [
+            5.27416658401489,
+            1.92589402198792,
+            33.7106437683105
+          ],
+          "target": true,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -35.749927520752,
+            2.43390393257141,
+            -28.8172740936279
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": false,
+          "path": 0,
+          "position": [
+            6.21664524078369,
+            1.92589628696442,
+            32.2884483337402
+          ],
+          "target": true,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            6.76963138580322,
+            1.92589569091797,
+            33.2964782714844
+          ],
+          "target": false,
+          "team": "T"
+        },
+        {
+          "alive": false,
+          "path": 7,
+          "position": [
+            13.857928276062,
+            2.23069882392883,
+            23.633264541626
+          ],
+          "target": true,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            5.26472902297974,
+            1.92589378356934,
+            33.7901039123535
+          ],
+          "target": false,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            5.21904706954956,
+            1.92589604854584,
+            32.777286529541
+          ],
+          "target": false,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            6.20639657974243,
+            1.92589640617371,
+            32.2964324951172
+          ],
+          "target": false,
+          "team": "T"
+        }
+      ]
+    },
+    {
+      "bomb": true,
+      "ct": 3,
+      "phase": "live",
+      "round": 1,
+      "score_ct": 0,
+      "score_t": 0,
+      "seconds": 60,
+      "t": 4,
+      "units": [
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -27.9869041442871,
+            -0.2778500020504,
+            28.7153816223145
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 9,
+          "position": [
+            -7.27562713623047,
+            2.23194313049316,
+            37.7511367797852
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": false,
+          "path": 0,
+          "position": [
+            5.27416658401489,
+            1.92589402198792,
+            33.7106437683105
+          ],
+          "target": true,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 10,
+          "position": [
+            -8.41552829742432,
+            2.23194313049316,
+            37.7622108459473
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": false,
+          "path": 0,
+          "position": [
+            6.21664524078369,
+            1.92589628696442,
+            32.2884483337402
+          ],
+          "target": true,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            12.767557144165,
+            2.23069787025452,
+            37.3328704833984
+          ],
+          "target": false,
+          "team": "T"
+        },
+        {
+          "alive": false,
+          "path": 7,
+          "position": [
+            13.857928276062,
+            2.23069882392883,
+            23.633264541626
+          ],
+          "target": true,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            10.732931137085,
+            2.23069787025452,
+            38.261905670166
+          ],
+          "target": false,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            5.21904706954956,
+            1.92589592933655,
+            32.777286529541
+          ],
+          "target": true,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            12.3948974609375,
+            2.23069787025452,
+            36.2557487487793
+          ],
+          "target": false,
+          "team": "T"
+        }
+      ]
+    },
+    {
+      "bomb": false,
+      "ct": 5,
+      "phase": "buy",
+      "round": 2,
+      "score_ct": 1,
+      "score_t": 0,
+      "seconds": 80,
+      "t": 5,
+      "units": [
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -28.0908126831055,
+            -0.275227189064026,
+            28.6773242950439
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -33.1860160827637,
+            -0.893742501735687,
+            24.5109996795654
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -33.0877952575684,
+            -0.873337805271149,
+            28.9813995361328
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -28.0910015106201,
+            -0.278955698013306,
+            24.2068996429443
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -31.2998809814453,
+            -0.508188426494598,
+            24.6126003265381
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            51.9683990478516,
+            2.23070454597473,
+            -13.792200088501
+          ],
+          "target": false,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            51.968448638916,
+            2.23076820373535,
+            -16.2309074401855
+          ],
+          "target": false,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            51.9683990478516,
+            2.23070454597473,
+            -18.6690006256104
+          ],
+          "target": false,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            51.9683990478516,
+            2.23070454597473,
+            -21.107400894165
+          ],
+          "target": false,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            49.9364013671875,
+            2.23070454597473,
+            -12.5729999542236
+          ],
+          "target": false,
+          "team": "T"
+        }
+      ]
+    },
+    {
+      "bomb": false,
+      "ct": 5,
+      "phase": "live",
+      "round": 2,
+      "score_ct": 1,
+      "score_t": 0,
+      "seconds": 100,
+      "t": 5,
+      "units": [
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -28.0564804077148,
+            -0.276171982288361,
+            28.6933460235596
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 45,
+          "position": [
+            -32.5081176757813,
+            -0.751617193222046,
+            24.2002506256104
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 26,
+          "position": [
+            -32.3303909301758,
+            -0.714677631855011,
+            29.1322193145752
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 35,
+          "position": [
+            -27.5683174133301,
+            -0.275334358215332,
+            23.7006072998047
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 23,
+          "position": [
+            -31.6717262268066,
+            -0.577849686145782,
+            24.7954044342041
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 71,
+          "position": [
+            51.2548408508301,
+            2.23195171356201,
+            -15.8195133209229
+          ],
+          "target": false,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 75,
+          "position": [
+            51.6098175048828,
+            2.23195171356201,
+            -17.9267578125
+          ],
+          "target": false,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 74,
+          "position": [
+            51.6046028137207,
+            2.23195171356201,
+            -19.8843002319336
+          ],
+          "target": false,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 70,
+          "position": [
+            51.2926826477051,
+            2.23195171356201,
+            -21.7360801696777
+          ],
+          "target": false,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 70,
+          "position": [
+            49.8264007568359,
+            2.23197770118713,
+            -12.7563314437866
+          ],
+          "target": false,
+          "team": "T"
+        }
+      ]
+    },
+    {
+      "bomb": false,
+      "ct": 4,
+      "phase": "live",
+      "round": 2,
+      "score_ct": 1,
+      "score_t": 0,
+      "seconds": 120,
+      "t": 5,
+      "units": [
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -28.0221481323242,
+            -0.277116745710373,
+            28.7093677520752
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -34.7333183288574,
+            2.43390393257141,
+            -27.2843360900879
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            5.27416658401489,
+            1.92589402198792,
+            33.7106437683105
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": false,
+          "path": 0,
+          "position": [
+            -35.749927520752,
+            2.43390393257141,
+            -28.8172740936279
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            6.21664524078369,
+            1.92589640617371,
+            32.2884483337402
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 10,
+          "position": [
+            -12.6195259094238,
+            2.16170191764832,
+            -24.7137432098389
+          ],
+          "target": false,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 12,
+          "position": [
+            -13.6704969406128,
+            2.16012072563171,
+            -25.1327819824219
+          ],
+          "target": false,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 13,
+          "position": [
+            -12.524097442627,
+            2.15616989135742,
+            -24.7597713470459
+          ],
+          "target": false,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 10,
+          "position": [
+            -13.302173614502,
+            2.16604471206665,
+            -24.7828731536865
+          ],
+          "target": false,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 12,
+          "position": [
+            -11.9152011871338,
+            2.14825057983398,
+            -24.7493000030518
+          ],
+          "target": false,
+          "team": "T"
+        }
+      ]
+    },
+    {
+      "bomb": true,
+      "ct": 3,
+      "phase": "live",
+      "round": 2,
+      "score_ct": 1,
+      "score_t": 0,
+      "seconds": 140,
+      "t": 5,
+      "units": [
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -27.9858360290527,
+            -0.277875334024429,
+            28.7155151367188
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": false,
+          "path": 0,
+          "position": [
+            -34.7333183288574,
+            2.43390393257141,
+            -27.2843360900879
+          ],
+          "target": true,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 26,
+          "position": [
+            -24.2519283294678,
+            2.23195242881775,
+            -1.82318449020386
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": false,
+          "path": 0,
+          "position": [
+            -35.749927520752,
+            2.43390393257141,
+            -28.8172740936279
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 27,
+          "position": [
+            -24.2752666473389,
+            2.12515950202942,
+            0.520506024360657
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -28.2366561889648,
+            2.28785395622253,
+            -24.2258148193359
+          ],
+          "target": false,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -28.7677154541016,
+            2.23070406913757,
+            -23.1870498657227
+          ],
+          "target": false,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -29.2685222625732,
+            2.23070406913757,
+            -23.7422389984131
+          ],
+          "target": false,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -29.298583984375,
+            2.23070406913757,
+            -24.6975555419922
+          ],
+          "target": false,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -28.7146472930908,
+            2.23070406913757,
+            -25.2007732391357
+          ],
+          "target": false,
+          "team": "T"
+        }
+      ]
+    },
+    {
+      "bomb": true,
+      "ct": 3,
+      "phase": "live",
+      "round": 2,
+      "score_ct": 1,
+      "score_t": 0,
+      "seconds": 160,
+      "t": 4,
+      "units": [
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -27.9492149353027,
+            -0.278747230768204,
+            28.7223873138428
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": false,
+          "path": 0,
+          "position": [
+            -34.7333183288574,
+            2.43390393257141,
+            -27.2843360900879
+          ],
+          "target": true,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -34.196590423584,
+            2.43390393257141,
+            -28.2201061248779
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": false,
+          "path": 0,
+          "position": [
+            -35.749927520752,
+            2.43390393257141,
+            -28.8172740936279
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -34.1935348510742,
+            2.43390393257141,
+            -28.279748916626
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -28.2366561889648,
+            2.28785395622253,
+            -24.2258148193359
+          ],
+          "target": false,
+          "team": "T"
+        },
+        {
+          "alive": false,
+          "path": 0,
+          "position": [
+            -28.7677154541016,
+            2.23070406913757,
+            -23.1870498657227
+          ],
+          "target": true,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -29.2685222625732,
+            2.23070406913757,
+            -23.7422389984131
+          ],
+          "target": false,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -29.298583984375,
+            2.23070406913757,
+            -24.6975555419922
+          ],
+          "target": false,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -28.7146472930908,
+            2.23070406913757,
+            -25.2007732391357
+          ],
+          "target": false,
+          "team": "T"
+        }
+      ]
+    },
+    {
+      "bomb": false,
+      "ct": 5,
+      "phase": "buy",
+      "round": 3,
+      "score_ct": 2,
+      "score_t": 0,
+      "seconds": 180,
+      "t": 5,
+      "units": [
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -28.0721302032471,
+            -0.275741279125214,
+            28.6860427856445
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -33.3562774658203,
+            -0.929355978965759,
+            24.5109996795654
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -33.2571830749512,
+            -0.908535122871399,
+            28.9813995361328
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -28.0735645294189,
+            -0.279415816068649,
+            24.2156181335449
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -31.4196434020996,
+            -0.526701748371124,
+            24.6126003265381
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            51.9683990478516,
+            2.23070454597473,
+            -13.792200088501
+          ],
+          "target": false,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            51.9694709777832,
+            2.23071718215942,
+            -16.240779876709
+          ],
+          "target": false,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            51.9683990478516,
+            2.23070454597473,
+            -18.6690006256104
+          ],
+          "target": false,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            51.9683990478516,
+            2.23070454597473,
+            -21.107400894165
+          ],
+          "target": false,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            49.9364013671875,
+            2.23070454597473,
+            -12.5729999542236
+          ],
+          "target": false,
+          "team": "T"
+        }
+      ]
+    },
+    {
+      "bomb": false,
+      "ct": 5,
+      "phase": "live",
+      "round": 3,
+      "score_ct": 2,
+      "score_t": 0,
+      "seconds": 200,
+      "t": 5,
+      "units": [
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            -28.0377979278564,
+            -0.276686102151871,
+            28.7020645141602
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 13,
+          "position": [
+            -41.0546379089355,
+            2.23386240005493,
+            -16.3502368927002
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            5.27416658401489,
+            1.92589390277863,
+            33.7106437683105
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 5,
+          "position": [
+            -38.1193580627441,
+            2.23000359535217,
+            -20.3765449523926
+          ],
+          "target": false,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 0,
+          "position": [
+            6.21664524078369,
+            1.92589628696442,
+            32.2884483337402
+          ],
+          "target": true,
+          "team": "CT"
+        },
+        {
+          "alive": true,
+          "path": 10,
+          "position": [
+            20.2237243652344,
+            2.07699394226074,
+            18.7921962738037
+          ],
+          "target": true,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 12,
+          "position": [
+            20.774751663208,
+            2.07017612457275,
+            18.7240219116211
+          ],
+          "target": true,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 17,
+          "position": [
+            21.0866451263428,
+            2.03144121170044,
+            18.3366680145264
+          ],
+          "target": true,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 14,
+          "position": [
+            21.3705959320068,
+            2.02875423431396,
+            18.2423076629639
+          ],
+          "target": false,
+          "team": "T"
+        },
+        {
+          "alive": true,
+          "path": 13,
+          "position": [
+            20.8392295837402,
+            2.06295967102051,
+            18.6518573760986
+          ],
+          "target": true,
+          "team": "T"
+        }
+      ]
+    }
+  ]
+}

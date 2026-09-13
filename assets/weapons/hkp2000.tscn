@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://assets/weapons/hkp2000_Model.res" id="1_hh6mj"]
+
+[node name="hkp2000" type="Node3D" unique_id=2066381527]
+metadata/weapon_id = "hkp2000"
+metadata/category = "pistol"
+metadata/muzzle = [0.0, 0.063, -0.222]
+metadata/original_art = true
+
+[node name="Model" type="Node3D" parent="." unique_id=2065358198]
+
+[node name="Sculpture" type="MeshInstance3D" parent="Model" unique_id=986675227]
+mesh = ExtResource("1_hh6mj")
+
+[node name="Muzzle" type="Node3D" parent="." unique_id=1799121933]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.063, -0.222)

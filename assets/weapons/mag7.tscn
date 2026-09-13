@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://assets/weapons/mag7_Model.res" id="1_feyod"]
+
+[node name="mag7" type="Node3D" unique_id=2067395329]
+metadata/weapon_id = "mag7"
+metadata/category = "shotgun"
+metadata/muzzle = [0.0, 0.08, -0.475]
+metadata/original_art = true
+
+[node name="Model" type="Node3D" parent="." unique_id=572521679]
+
+[node name="Sculpture" type="MeshInstance3D" parent="Model" unique_id=189620193]
+mesh = ExtResource("1_feyod")
+
+[node name="Muzzle" type="Node3D" parent="." unique_id=21365605]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08, -0.475)

@@ -1,0 +1,45 @@
+# Godot caches and local exported builds (published as release assets).
+/.godot/
+/builds/
+/export_credentials.cfg
+
+# Local tools, editor settings and credentials.
+/.local/
+/.venv/
+/.idea/
+/.vscode/
+__pycache__/
+*.py[cod]
+*.tmp
+*.log
+*.bak
+.env
+.env.*
+!.env.example
+Thumbs.db
+.DS_Store
+
+# Superseded hand-inferred map and regenerable authoring intermediates.
+/assets/map/mirage_environment.glb
+/assets/map/mirage_environment.glb.import
+/assets/map/measurements.json
+/assets/characters/source/
+/assets/characters/gallery*
+/assets/weapons/source/*.json
+!/assets/weapons/source/verified_values.json
+/assets/ui/ui_preview*
+
+# Keep the published validation evidence, omit temporary captures and probes.
+/artifacts/*
+!/artifacts/.gdignore
+!/artifacts/runtime_validation.json
+!/artifacts/runtime_validation_quick.json
+!/artifacts/map_routes.json
+!/artifacts/map_patrol_routes.json
+!/artifacts/ground_palette_audit.json
+!/artifacts/bot_nav_probe_fixtures.json
+!/artifacts/match_flow_ct.json
+!/artifacts/match_flow_t.json
+!/artifacts/map_preview_overview.png
+!/artifacts/map_preview_a_site.png
+!/artifacts/runtime_menu_source.png

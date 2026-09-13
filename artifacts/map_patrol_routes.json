@@ -1,0 +1,383 @@
+{
+	"arrival_tolerance_m": 0.5,
+	"controller": "res://scripts/combatant.gd",
+	"controller_sha256": "edf4757bb1bdd276c8ece9e16c31292c291ba1cc1d7f6c012cee88665964fae0",
+	"fixed_fps": 60,
+	"graph_routes": [
+		{
+			"name": "CT[0]->A",
+			"nonempty": true,
+			"points": 24
+		},
+		{
+			"name": "CT[0]->B",
+			"nonempty": true,
+			"points": 42
+		},
+		{
+			"name": "CT[1]->A",
+			"nonempty": true,
+			"points": 26
+		},
+		{
+			"name": "CT[1]->B",
+			"nonempty": true,
+			"points": 48
+		},
+		{
+			"name": "CT[2]->A",
+			"nonempty": true,
+			"points": 28
+		},
+		{
+			"name": "CT[2]->B",
+			"nonempty": true,
+			"points": 40
+		},
+		{
+			"name": "CT[3]->A",
+			"nonempty": true,
+			"points": 22
+		},
+		{
+			"name": "CT[3]->B",
+			"nonempty": true,
+			"points": 38
+		},
+		{
+			"name": "CT[4]->A",
+			"nonempty": true,
+			"points": 23
+		},
+		{
+			"name": "CT[4]->B",
+			"nonempty": true,
+			"points": 45
+		},
+		{
+			"name": "CT[5]->A",
+			"nonempty": true,
+			"points": 27
+		},
+		{
+			"name": "CT[5]->B",
+			"nonempty": true,
+			"points": 44
+		},
+		{
+			"name": "CT[6]->A",
+			"nonempty": true,
+			"points": 27
+		},
+		{
+			"name": "CT[6]->B",
+			"nonempty": true,
+			"points": 46
+		},
+		{
+			"name": "CT[7]->A",
+			"nonempty": true,
+			"points": 19
+		},
+		{
+			"name": "CT[7]->B",
+			"nonempty": true,
+			"points": 40
+		},
+		{
+			"name": "CT[8]->A",
+			"nonempty": true,
+			"points": 23
+		},
+		{
+			"name": "CT[8]->B",
+			"nonempty": true,
+			"points": 36
+		},
+		{
+			"name": "CT[9]->A",
+			"nonempty": true,
+			"points": 20
+		},
+		{
+			"name": "CT[9]->B",
+			"nonempty": true,
+			"points": 37
+		},
+		{
+			"name": "CT[10]->A",
+			"nonempty": true,
+			"points": 22
+		},
+		{
+			"name": "CT[10]->B",
+			"nonempty": true,
+			"points": 41
+		},
+		{
+			"name": "CT[11]->A",
+			"nonempty": true,
+			"points": 22
+		},
+		{
+			"name": "CT[11]->B",
+			"nonempty": true,
+			"points": 35
+		},
+		{
+			"name": "CT[12]->A",
+			"nonempty": true,
+			"points": 20
+		},
+		{
+			"name": "CT[12]->B",
+			"nonempty": true,
+			"points": 44
+		},
+		{
+			"name": "CT[13]->A",
+			"nonempty": true,
+			"points": 20
+		},
+		{
+			"name": "CT[13]->B",
+			"nonempty": true,
+			"points": 38
+		},
+		{
+			"name": "CT[14]->A",
+			"nonempty": true,
+			"points": 20
+		},
+		{
+			"name": "CT[14]->B",
+			"nonempty": true,
+			"points": 39
+		},
+		{
+			"name": "CT[15]->A",
+			"nonempty": true,
+			"points": 19
+		},
+		{
+			"name": "CT[15]->B",
+			"nonempty": true,
+			"points": 37
+		},
+		{
+			"name": "T[0]->A",
+			"nonempty": true,
+			"points": 48
+		},
+		{
+			"name": "T[0]->B",
+			"nonempty": true,
+			"points": 74
+		},
+		{
+			"name": "T[1]->A",
+			"nonempty": true,
+			"points": 53
+		},
+		{
+			"name": "T[1]->B",
+			"nonempty": true,
+			"points": 75
+		},
+		{
+			"name": "T[2]->A",
+			"nonempty": true,
+			"points": 50
+		},
+		{
+			"name": "T[2]->B",
+			"nonempty": true,
+			"points": 74
+		},
+		{
+			"name": "T[3]->A",
+			"nonempty": true,
+			"points": 54
+		},
+		{
+			"name": "T[3]->B",
+			"nonempty": true,
+			"points": 71
+		},
+		{
+			"name": "T[4]->A",
+			"nonempty": true,
+			"points": 48
+		},
+		{
+			"name": "T[4]->B",
+			"nonempty": true,
+			"points": 70
+		},
+		{
+			"name": "T[5]->A",
+			"nonempty": true,
+			"points": 50
+		},
+		{
+			"name": "T[5]->B",
+			"nonempty": true,
+			"points": 70
+		},
+		{
+			"name": "T[6]->A",
+			"nonempty": true,
+			"points": 50
+		},
+		{
+			"name": "T[6]->B",
+			"nonempty": true,
+			"points": 69
+		},
+		{
+			"name": "T[7]->A",
+			"nonempty": true,
+			"points": 51
+		},
+		{
+			"name": "T[7]->B",
+			"nonempty": true,
+			"points": 68
+		},
+		{
+			"name": "T[8]->A",
+			"nonempty": true,
+			"points": 52
+		},
+		{
+			"name": "T[8]->B",
+			"nonempty": true,
+			"points": 67
+		},
+		{
+			"name": "T[9]->A",
+			"nonempty": true,
+			"points": 48
+		},
+		{
+			"name": "T[9]->B",
+			"nonempty": true,
+			"points": 69
+		},
+		{
+			"name": "T[10]->A",
+			"nonempty": true,
+			"points": 47
+		},
+		{
+			"name": "T[10]->B",
+			"nonempty": true,
+			"points": 69
+		},
+		{
+			"name": "T[11]->A",
+			"nonempty": true,
+			"points": 46
+		},
+		{
+			"name": "T[11]->B",
+			"nonempty": true,
+			"points": 70
+		},
+		{
+			"name": "T[12]->A",
+			"nonempty": true,
+			"points": 45
+		},
+		{
+			"name": "T[12]->B",
+			"nonempty": true,
+			"points": 71
+		},
+		{
+			"name": "T[13]->A",
+			"nonempty": true,
+			"points": 46
+		},
+		{
+			"name": "T[13]->B",
+			"nonempty": true,
+			"points": 72
+		},
+		{
+			"name": "T[14]->A",
+			"nonempty": true,
+			"points": 47
+		},
+		{
+			"name": "T[14]->B",
+			"nonempty": true,
+			"points": 71
+		},
+		{
+			"name": "T[15]->A",
+			"nonempty": true,
+			"points": 49
+		},
+		{
+			"name": "T[15]->B",
+			"nonempty": true,
+			"points": 71
+		},
+		{
+			"name": "T[16]->A",
+			"nonempty": true,
+			"points": 48
+		},
+		{
+			"name": "T[16]->B",
+			"nonempty": true,
+			"points": 70
+		}
+	],
+	"passed": true,
+	"physical_routes": [
+		{
+			"distance_to_target": 0.243231758475304,
+			"frames": 1240,
+			"name": "patrol A->B",
+			"passed": true,
+			"path_nonempty": true,
+			"path_points": 57,
+			"position": [
+				-35.1900215148926,
+				2.43515110015869,
+				-28.0995903015137
+			],
+			"reason": "arrived",
+			"target": [
+				-35.0011940002441,
+				2.56380105018616,
+				-28.0161933898926
+			],
+			"waypoint_index": 57
+		},
+		{
+			"distance_to_target": 0.306236624717712,
+			"frames": 1249,
+			"name": "patrol B->A",
+			"passed": true,
+			"path_nonempty": true,
+			"path_points": 62,
+			"position": [
+				5.67126846313477,
+				1.92714273929596,
+				33.3285102844238
+			],
+			"reason": "arrived",
+			"target": [
+				5.84200143814087,
+				2.03039407730103,
+				33.0961952209473
+			],
+			"waypoint_index": 62
+		}
+	],
+	"physics_engine": "Jolt Physics",
+	"waypoint_tolerance_m": 0.18
+}

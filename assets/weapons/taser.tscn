@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://assets/weapons/taser_Model.res" id="1_415fc"]
+
+[node name="taser" type="Node3D" unique_id=2082827814]
+metadata/weapon_id = "taser"
+metadata/category = "pistol"
+metadata/muzzle = [0.0, 0.065, -0.252]
+metadata/original_art = true
+
+[node name="Model" type="Node3D" parent="." unique_id=1409908719]
+
+[node name="Sculpture" type="MeshInstance3D" parent="Model" unique_id=1288393136]
+mesh = ExtResource("1_415fc")
+
+[node name="Muzzle" type="Node3D" parent="." unique_id=772519856]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.065, -0.252)

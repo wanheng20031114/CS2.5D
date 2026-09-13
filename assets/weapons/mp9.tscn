@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://assets/weapons/mp9_Model.res" id="1_ad1pb"]
+
+[node name="mp9" type="Node3D" unique_id=334399024]
+metadata/weapon_id = "mp9"
+metadata/category = "smg"
+metadata/muzzle = [0.0, 0.077, -0.389]
+metadata/original_art = true
+
+[node name="Model" type="Node3D" parent="." unique_id=1083536746]
+
+[node name="Sculpture" type="MeshInstance3D" parent="Model" unique_id=1606999957]
+mesh = ExtResource("1_ad1pb")
+
+[node name="Muzzle" type="Node3D" parent="." unique_id=231449074]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.077, -0.389)

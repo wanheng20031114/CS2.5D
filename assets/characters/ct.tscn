@@ -1,0 +1,83 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://assets/characters/ct_Rig_Upper_Head.res" id="1_faalc"]
+[ext_resource type="ArrayMesh" path="res://assets/characters/ct_Rig_Upper_LeftArm_LeftForearm.res" id="2_2wpxv"]
+[ext_resource type="ArrayMesh" path="res://assets/characters/ct_Rig_Upper_LeftArm.res" id="3_ww8b6"]
+[ext_resource type="ArrayMesh" path="res://assets/characters/ct_Rig_Upper_RightArm_RightForearm.res" id="4_bgps5"]
+[ext_resource type="ArrayMesh" path="res://assets/characters/ct_Rig_Upper_RightArm.res" id="5_jpv5f"]
+[ext_resource type="ArrayMesh" path="res://assets/characters/ct_Rig_Upper.res" id="6_odsuy"]
+[ext_resource type="ArrayMesh" path="res://assets/characters/ct_Rig_LeftLeg_LeftShin.res" id="7_of7q3"]
+[ext_resource type="ArrayMesh" path="res://assets/characters/ct_Rig_LeftLeg.res" id="8_iucr7"]
+[ext_resource type="ArrayMesh" path="res://assets/characters/ct_Rig_RightLeg_RightShin.res" id="9_b5yb1"]
+[ext_resource type="ArrayMesh" path="res://assets/characters/ct_Rig_RightLeg.res" id="10_7bds0"]
+
+[node name="ct" type="Node3D" unique_id=1855345195]
+metadata/team = "CT"
+metadata/height_m = 1.88
+metadata/faces = "-Z"
+metadata/original_art = true
+
+[node name="Rig" type="Node3D" parent="." unique_id=123422858]
+
+[node name="Upper" type="Node3D" parent="Rig" unique_id=1670419221]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.88, 0)
+
+[node name="Head" type="Node3D" parent="Rig/Upper" unique_id=2053944545]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+
+[node name="Sculpture" type="MeshInstance3D" parent="Rig/Upper/Head" unique_id=1560424552]
+mesh = ExtResource("1_faalc")
+
+[node name="LeftArm" type="Node3D" parent="Rig/Upper" unique_id=793715137]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.278, 0.425, -0.005)
+
+[node name="LeftForearm" type="Node3D" parent="Rig/Upper/LeftArm" unique_id=1129946405]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.074, -0.25, -0.1)
+
+[node name="Sculpture" type="MeshInstance3D" parent="Rig/Upper/LeftArm/LeftForearm" unique_id=374284511]
+mesh = ExtResource("2_2wpxv")
+
+[node name="Sculpture" type="MeshInstance3D" parent="Rig/Upper/LeftArm" unique_id=861568118]
+mesh = ExtResource("3_ww8b6")
+
+[node name="RightArm" type="Node3D" parent="Rig/Upper" unique_id=2069069293]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.278, 0.425, -0.005)
+
+[node name="RightForearm" type="Node3D" parent="Rig/Upper/RightArm" unique_id=1015485720]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.074, -0.25, -0.1)
+
+[node name="Sculpture" type="MeshInstance3D" parent="Rig/Upper/RightArm/RightForearm" unique_id=1305313232]
+mesh = ExtResource("4_bgps5")
+
+[node name="Sculpture" type="MeshInstance3D" parent="Rig/Upper/RightArm" unique_id=478164631]
+mesh = ExtResource("5_jpv5f")
+
+[node name="WeaponSocket" type="Node3D" parent="Rig/Upper" unique_id=29123595]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11, 0.315, -0.335)
+
+[node name="Sculpture" type="MeshInstance3D" parent="Rig/Upper" unique_id=884745438]
+mesh = ExtResource("6_odsuy")
+
+[node name="LeftLeg" type="Node3D" parent="Rig" unique_id=31456093]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.145, 0.83, 0)
+
+[node name="LeftShin" type="Node3D" parent="Rig/LeftLeg" unique_id=1177844896]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.35, 0.015)
+
+[node name="Sculpture" type="MeshInstance3D" parent="Rig/LeftLeg/LeftShin" unique_id=19065053]
+mesh = ExtResource("7_of7q3")
+
+[node name="Sculpture" type="MeshInstance3D" parent="Rig/LeftLeg" unique_id=471621665]
+mesh = ExtResource("8_iucr7")
+
+[node name="RightLeg" type="Node3D" parent="Rig" unique_id=1350703910]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.145, 0.83, 0)
+
+[node name="RightShin" type="Node3D" parent="Rig/RightLeg" unique_id=1655610006]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.35, 0.015)
+
+[node name="Sculpture" type="MeshInstance3D" parent="Rig/RightLeg/RightShin" unique_id=451396307]
+mesh = ExtResource("9_b5yb1")
+
+[node name="Sculpture" type="MeshInstance3D" parent="Rig/RightLeg" unique_id=143977351]
+mesh = ExtResource("10_7bds0")

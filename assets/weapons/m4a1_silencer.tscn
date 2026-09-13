@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://assets/weapons/m4a1_silencer_Model.res" id="1_j8rm2"]
+
+[node name="m4a1_silencer" type="Node3D" unique_id=265103927]
+metadata/weapon_id = "m4a1_silencer"
+metadata/category = "rifle"
+metadata/muzzle = [0.0, 0.082, -0.8930000000000001]
+metadata/original_art = true
+
+[node name="Model" type="Node3D" parent="." unique_id=1393265961]
+
+[node name="Sculpture" type="MeshInstance3D" parent="Model" unique_id=1731718782]
+mesh = ExtResource("1_j8rm2")
+
+[node name="Muzzle" type="Node3D" parent="." unique_id=433138307]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.082, -0.893)

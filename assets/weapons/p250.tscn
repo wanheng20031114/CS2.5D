@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://assets/weapons/p250_Model.res" id="1_dv2q3"]
+
+[node name="p250" type="Node3D" unique_id=2091313419]
+metadata/weapon_id = "p250"
+metadata/category = "pistol"
+metadata/muzzle = [0.0, 0.063, -0.202]
+metadata/original_art = true
+
+[node name="Model" type="Node3D" parent="." unique_id=984867141]
+
+[node name="Sculpture" type="MeshInstance3D" parent="Model" unique_id=1925711836]
+mesh = ExtResource("1_dv2q3")
+
+[node name="Muzzle" type="Node3D" parent="." unique_id=1287425777]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.063, -0.202)

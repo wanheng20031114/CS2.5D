@@ -1,0 +1,250 @@
+{
+	"checks": [
+		{
+			"name": "menu_visible_on_boot",
+			"passed": true
+		},
+		{
+			"name": "practice_button_changes_mode",
+			"passed": true
+		},
+		{
+			"name": "CT_practice_starts_from_real_menu_button",
+			"passed": true
+		},
+		{
+			"name": "CT_practice_has_three_enemy_bots",
+			"passed": true
+		},
+		{
+			"name": "B_opens_shop",
+			"passed": true
+		},
+		{
+			"name": "available_pistol_button_enabled",
+			"passed": true
+		},
+		{
+			"name": "purchase_deducts_exact_catalog_price",
+			"passed": true
+		},
+		{
+			"name": "purchase_equips_pistol",
+			"passed": true
+		},
+		{
+			"name": "wrong_team_weapon_disabled",
+			"passed": true
+		},
+		{
+			"name": "helmet_upgrade_349_dollars_disabled",
+			"passed": true
+		},
+		{
+			"name": "helmet_upgrade_350_dollars_enabled",
+			"passed": true
+		},
+		{
+			"name": "helmet_upgrade_350_displays_350_price",
+			"passed": true
+		},
+		{
+			"name": "helmet_upgrade_350_native_click_deducts_350",
+			"passed": true
+		},
+		{
+			"name": "helmet_upgrade_799_dollars_enabled",
+			"passed": true
+		},
+		{
+			"name": "helmet_upgrade_799_displays_350_price",
+			"passed": true
+		},
+		{
+			"name": "helmet_upgrade_799_native_click_deducts_350",
+			"passed": true
+		},
+		{
+			"name": "helmet_upgrade_999_dollars_enabled",
+			"passed": true
+		},
+		{
+			"name": "helmet_upgrade_999_displays_350_price",
+			"passed": true
+		},
+		{
+			"name": "helmet_upgrade_999_native_click_deducts_350",
+			"passed": true
+		},
+		{
+			"name": "B_closes_shop",
+			"passed": true
+		},
+		{
+			"name": "Tab_opens_inventory",
+			"passed": true
+		},
+		{
+			"name": "inventory_primary_button_equips_slot0",
+			"passed": true
+		},
+		{
+			"name": "grenade_inventory_not_invalid_equip_button",
+			"passed": true
+		},
+		{
+			"name": "Escape_closes_inventory_without_pausing",
+			"passed": true
+		},
+		{
+			"name": "Escape_opens_pause",
+			"passed": true
+		},
+		{
+			"name": "continue_button_resumes",
+			"passed": true
+		},
+		{
+			"name": "settings_open_from_pause",
+			"passed": true
+		},
+		{
+			"name": "settings_done_resumes_paused_game",
+			"passed": true
+		},
+		{
+			"name": "return_menu_button",
+			"passed": true
+		},
+		{
+			"name": "T_practice_starts_from_real_menu_button",
+			"passed": true
+		},
+		{
+			"name": "T_shop_buy_rifle_uses_price_and_loadout",
+			"passed": true
+		},
+		{
+			"name": "shop_close_button_returns_gameplay",
+			"passed": true
+		}
+	],
+	"cpu": "Intel(R) Core(TM) i9-10900KF CPU @ 3.70GHz",
+	"engine": "4.6.3-stable (official)",
+	"failed": 0,
+	"finished_utc": "2026-09-13T03:02:43",
+	"gpu": "NVIDIA GeForce RTX 3080",
+	"map_assets": {
+		"res://assets/map/mirage_baked.tscn": {
+			"bytes": 11942264,
+			"modified_unix": 1789267041
+		},
+		"res://assets/map/navigation.json": {
+			"bytes": 1272141,
+			"modified_unix": 1789267066
+		},
+		"res://assets/map/source_environment.glb": {
+			"bytes": 115171928,
+			"modified_unix": 1789268118
+		}
+	},
+	"native_rate_sample": {
+		"actors": 4,
+		"alive_player": true,
+		"camera_size": 24.0000076293945,
+		"draw_calls": {
+			"max": 298.0,
+			"mean": 298.0,
+			"p50": 298.0,
+			"p95": 298.0
+		},
+		"effective_fps": 359.166374843987,
+		"engine_process_cpu_ms": {
+			"max": 3.181,
+			"mean": 3.14319999999997,
+			"p50": 3.109,
+			"p95": 3.181
+		},
+		"engine_process_frames": 600,
+		"frame_ms": {
+			"max": 5.483,
+			"mean": 2.78421666666667,
+			"p50": 2.779,
+			"p95": 3.142
+		},
+		"frames": 600,
+		"mode": "practice",
+		"physics_cpu_ms": {
+			"max": 3.427,
+			"mean": 3.32202499999996,
+			"p50": 3.427,
+			"p95": 3.427
+		},
+		"physics_frames": 100,
+		"rendered_primitives": {
+			"max": 1343389.0,
+			"mean": 1343389.0,
+			"p50": 1343389.0,
+			"p95": 1343389.0
+		},
+		"static_memory_mb": 167.355796813965,
+		"video_memory_mb": 337.345275878906,
+		"wall_seconds": 1.670535
+	},
+	"os": "Windows",
+	"performance": {
+		"actors": 4,
+		"alive_player": true,
+		"camera_size": 24.0000076293945,
+		"configured_frame_limit": 60,
+		"draw_calls": {
+			"max": 298.0,
+			"mean": 298.0,
+			"p50": 298.0,
+			"p95": 298.0
+		},
+		"effective_fps": 59.9973901135301,
+		"engine_process_cpu_ms": {
+			"max": 2.892,
+			"mean": 2.21413833333335,
+			"p50": 2.121,
+			"p95": 2.892
+		},
+		"engine_process_frames": 600,
+		"frame_ms": {
+			"max": 22.097,
+			"mean": 16.667385,
+			"p50": 16.644,
+			"p95": 18.846
+		},
+		"frames": 600,
+		"mode": "practice",
+		"physics_cpu_ms": {
+			"max": 4.864,
+			"mean": 3.65370166666666,
+			"p50": 3.529,
+			"p95": 4.864
+		},
+		"physics_frames": 600,
+		"rendered_primitives": {
+			"max": 1343389.0,
+			"mean": 1343389.0,
+			"p50": 1343389.0,
+			"p95": 1343389.0
+		},
+		"static_memory_mb": 167.370113372803,
+		"video_memory_mb": 337.345275878906,
+		"wall_seconds": 10.000435
+	},
+	"render_method": "forward_plus",
+	"started_utc": "2026-09-13T03:02:20",
+	"viewport_pixels": [
+		1600.0,
+		900.0
+	],
+	"vsync_mode": 1,
+	"window_pixels": [
+		1440,
+		810
+	]
+}
