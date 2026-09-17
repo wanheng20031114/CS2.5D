@@ -1,0 +1,614 @@
+{
+	"checks": [
+		{
+			"detail": null,
+			"name": "legacy_settings_migrate_without_mutating_input",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "bounded_finite_parameter_fp_fov",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "bounded_finite_parameter_fp_ads_fov",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "bounded_finite_parameter_fp_sensitivity",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "bounded_finite_parameter_fp_ads_sensitivity",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "bounded_finite_parameter_fp_smoothing",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "bounded_finite_parameter_fp_pitch_up",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "bounded_finite_parameter_fp_pitch_down",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "bounded_finite_parameter_fp_eye_height",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "bounded_finite_parameter_fp_near",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "bounded_finite_parameter_fp_far",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "bounded_finite_parameter_fp_viewmodel_fov",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "bounded_finite_parameter_fp_weapon_x",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "bounded_finite_parameter_fp_weapon_y",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "bounded_finite_parameter_fp_weapon_z",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "bounded_finite_parameter_fp_weapon_scale",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "bounded_finite_parameter_fp_bob",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "bounded_finite_parameter_fp_bob_speed",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "bounded_finite_parameter_fp_sway",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "bounded_finite_parameter_fp_recoil",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "bounded_finite_parameter_fp_recoil_recovery",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "bounded_finite_parameter_fp_crosshair_length",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "bounded_finite_parameter_fp_crosshair_gap",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "bounded_finite_parameter_fp_crosshair_width",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "invalid_types_and_mode_restore_safe_defaults",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "ADS_FOV_never_widens_normal_FOV",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "first_person_uses_perspective",
+			"passed": true
+		},
+		{
+			"detail": "(1000.0, 1.56, 1000.0)",
+			"name": "camera_at_configured_eye_height",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "camera_applies_FOV_and_clipping",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "first_person_hides_local_body_and_disables_fan_mask",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "view_mode_persists_to_configuration",
+			"passed": true
+		},
+		{
+			"detail": {
+				"pitch": 0.10471975511966,
+				"yaw": -0.20943951023932
+			},
+			"name": "relative_mouse_uses_degrees_per_pixel_and_pitch",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "up_pitch_is_clamped",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "down_pitch_is_clamped",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "invert_Y_reverses_pitch",
+			"passed": true
+		},
+		{
+			"detail": {
+				"fov": 55.0001220703125,
+				"yaw": -0.136135681655558
+			},
+			"name": "ADS_applies_sensitivity_multiplier_and_FOV",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "releasing_ADS_restores_normal_FOV",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "smoothing_moves_toward_target_without_jumping",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "smoothing_converges_to_mouse_target",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "viewmodel_has_independent_world_and_FOV",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "viewmodel_tracks_equipped_pistol",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "viewmodel_tracks_knife",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "switching_back_restores_top_down_camera_body_and_fan",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "top_down_disables_viewmodel_rendering",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "switching_to_first_person_resets_pitch",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "crosshair_and_shot_align_at_height_4.0",
+			"passed": true
+		},
+		{
+			"detail": 64.9965387716854,
+			"name": "3D_shot_hits_enemy_at_height_4.0",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "visible_enemy_at_height_4.0",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "crosshair_and_shot_align_at_height_-4.0",
+			"passed": true
+		},
+		{
+			"detail": 65.0420118300494,
+			"name": "3D_shot_hits_enemy_at_height_-4.0",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "visible_enemy_at_height_-4.0",
+			"passed": true
+		},
+		{
+			"detail": 64.9110133334889,
+			"name": "eye_ray_shoots_and_sees_over_low_cover",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "wall_blocks_first_person_bullet_but_consumes_ammo",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "wall_blocks_first_person_enemy_visibility",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "enemy_behind_camera_is_hidden",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "enemy_outside_camera_frustum_is_hidden",
+			"passed": true
+		},
+		{
+			"detail": {
+				"down": "(0.0, -3.874537, -15.77189)",
+				"up": "(0.0, 10.74631, -16.98945)"
+			},
+			"name": "grenade_throw_follows_vertical_view_direction",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "D_strafes_right_relative_to_first_person_yaw",
+			"passed": true
+		},
+		{
+			"detail": {
+				"fov": 55.4474143981934,
+				"normal_speed": 5.70000028610229,
+				"speed": 2.45100021362305
+			},
+			"name": "right_mouse_ADS_slows_strafing_and_narrows_FOV",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "A_strafes_left_relative_to_first_person_yaw",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "active_first_person_captures_mouse",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "inventory_releases_mouse",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "modal_mouse_motion_cannot_rotate_player",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "closing_inventory_recaptures_mouse",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "pause_releases_mouse",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "resume_recaptures_mouse",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "V_key_switches_to_top_down",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "V_key_switches_back_and_recaptures_mouse",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "pause_disables_viewmodel_and_camera_update_cannot_reenable_it",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "pause_blocks_HUD_grenade_and_equipment_actions",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "resume_reenables_viewmodel",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "focus_loss_disables_viewmodel_and_camera_update_cannot_reenable_it",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "focus_return_preserves_pause_until_player_resumes",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "resume_after_focus_return_reenables_viewmodel",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "round_result_disables_viewmodel_and_camera_update_cannot_reenable_it",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "round_result_4_key_cannot_consume_grenades",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "round_result_HUD_action_cannot_consume_grenades",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "round_result_keyboard_and_HUD_cannot_change_equipment",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "new_round_after_result_reenables_viewmodel",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "death_restores_observer_camera_and_releases_capture",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "practice_respawn_restores_first_person",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "practice_respawn_recaptures_mouse",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "new_round_resets_pitch_and_preserves_selected_mode",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "menu_restores_orthographic_camera_body_and_pointer",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "map_preview_starts_orthographic_after_first_person",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "perspective_preview_exit_restores_menu_projection",
+			"passed": true
+		},
+		{
+			"detail": null,
+			"name": "starting_after_preview_restores_saved_first_person_mode",
+			"passed": true
+		}
+	],
+	"display_server": "Windows",
+	"duration_ms": 3806,
+	"failures": [],
+	"files_sha256": {
+		"main": "abb17b194c3744f754f5be475f479f2e8aee1f8ad51ea2d4764b139e1cf75b3d",
+		"settings": "059bb7a6173029644f88dbcbc9c4363c4f19dcbbd01b206d075f8bb19655de5c"
+	},
+	"godot": "4.6.3-stable (official)",
+	"limitations": [
+		"Native physics integration; rendered pixels and subjective mouse feel require visual review. Native input is exercised only with a window display server.",
+		"The fixture uses an isolated arena outside Mirage, and pauses automatic match logic.",
+		"The user's settings file is restored byte for byte on completion and watchdog timeout."
+	],
+	"observations": {
+		"parameter_defaults": {
+			"fp_ads_fov": 55.0,
+			"fp_ads_sensitivity": 0.65,
+			"fp_bob": 0.015,
+			"fp_bob_speed": 10.0,
+			"fp_crosshair_dot": false,
+			"fp_crosshair_dynamic": true,
+			"fp_crosshair_gap": 4.0,
+			"fp_crosshair_length": 7.0,
+			"fp_crosshair_width": 2.0,
+			"fp_eye_height": 1.5,
+			"fp_far": 240.0,
+			"fp_fov": 75.0,
+			"fp_invert_y": false,
+			"fp_near": 0.03,
+			"fp_pitch_down": 89.0,
+			"fp_pitch_up": 89.0,
+			"fp_recoil": 0.6,
+			"fp_recoil_recovery": 10.0,
+			"fp_sensitivity": 0.12,
+			"fp_smoothing": 0.0,
+			"fp_sway": 0.4,
+			"fp_viewmodel_fov": 65.0,
+			"fp_weapon_scale": 1.0,
+			"fp_weapon_x": 0.24,
+			"fp_weapon_y": -0.22,
+			"fp_weapon_z": -0.38,
+			"view_mode": "top_down"
+		},
+		"parameter_ranges": {
+			"fp_ads_fov": [
+				30.0,
+				90.0,
+				1.0
+			],
+			"fp_ads_sensitivity": [
+				0.1,
+				1.0,
+				0.05
+			],
+			"fp_bob": [
+				0.0,
+				0.05,
+				0.001
+			],
+			"fp_bob_speed": [
+				4.0,
+				18.0,
+				0.5
+			],
+			"fp_crosshair_gap": [
+				0.0,
+				12.0,
+				1.0
+			],
+			"fp_crosshair_length": [
+				2.0,
+				16.0,
+				1.0
+			],
+			"fp_crosshair_width": [
+				1.0,
+				4.0,
+				1.0
+			],
+			"fp_eye_height": [
+				1.2,
+				1.6,
+				0.01
+			],
+			"fp_far": [
+				100.0,
+				400.0,
+				10.0
+			],
+			"fp_fov": [
+				50.0,
+				100.0,
+				1.0
+			],
+			"fp_near": [
+				0.01,
+				0.1,
+				0.01
+			],
+			"fp_pitch_down": [
+				30.0,
+				89.0,
+				1.0
+			],
+			"fp_pitch_up": [
+				30.0,
+				89.0,
+				1.0
+			],
+			"fp_recoil": [
+				0.0,
+				2.0,
+				0.05
+			],
+			"fp_recoil_recovery": [
+				2.0,
+				25.0,
+				1.0
+			],
+			"fp_sensitivity": [
+				0.02,
+				0.5,
+				0.01
+			],
+			"fp_smoothing": [
+				0.0,
+				30.0,
+				1.0
+			],
+			"fp_sway": [
+				0.0,
+				2.0,
+				0.05
+			],
+			"fp_viewmodel_fov": [
+				40.0,
+				100.0,
+				1.0
+			],
+			"fp_weapon_scale": [
+				0.5,
+				1.5,
+				0.05
+			],
+			"fp_weapon_x": [
+				-0.4,
+				0.4,
+				0.01
+			],
+			"fp_weapon_y": [
+				-0.5,
+				-0.05,
+				0.01
+			],
+			"fp_weapon_z": [
+				-0.8,
+				-0.2,
+				0.01
+			]
+		}
+	},
+	"skipped": []
+}

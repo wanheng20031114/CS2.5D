@@ -12,6 +12,7 @@ func _draw() -> void:
 	if not is_instance_valid(game) or not game.running or game.ui.is_modal_open(): return
 	for actor in game.actors:
 		if actor == game.player or not actor.alive or not actor.visible: continue
+		if game.camera.is_position_behind(actor.position+Vector3.UP*2.1): continue
 		var at: Vector2 = game.camera.unproject_position(actor.position+Vector3.UP*2.1)
 		if not Rect2(Vector2.ZERO,size).has_point(at): continue
 		var color := Color("da785e") if actor.team != game.side else Color("8bb3ba")

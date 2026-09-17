@@ -34,6 +34,7 @@ Thumbs.db
 !/artifacts/.gdignore
 !/artifacts/runtime_validation.json
 !/artifacts/runtime_validation_quick.json
+!/artifacts/first_person_results.json
 !/artifacts/map_routes.json
 !/artifacts/map_patrol_routes.json
 !/artifacts/ground_palette_audit.json

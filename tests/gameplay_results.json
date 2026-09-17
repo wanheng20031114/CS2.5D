@@ -342,13 +342,13 @@
 			"passed": true
 		}
 	],
-	"date": "2026-09-13T04:01:56",
-	"duration_ms": 3255,
+	"date": "2026-09-16T22:20:46",
+	"duration_ms": 3226,
 	"failures": [],
 	"files_sha256": {
 		"catalog": "841cc3d21b68ce6c9ff9d3bfd90aa61daf62bfde6ccd496c46367d8241d4d7f9",
 		"combatant": "edf4757bb1bdd276c8ece9e16c31292c291ba1cc1d7f6c012cee88665964fae0",
-		"main": "76e24335f4f3c00857b88972bd6b955ff8da317db307c408dfbc44669ff6cdb7"
+		"main": "ac50c27ebaf7eec13959c59e43a359f27c695cb5eeb0617c93a7fc82974457ad"
 	},
 	"godot": "4.6.3-stable (official)",
 	"limitations": [

@@ -32,10 +32,15 @@ func _configure() -> void:
 			game.player.rotation.y = 0.6
 			game.aim_direction = Vector3(-0.7,0,-0.7)
 			game.camera_target = game.player.position
+			if "--first-person" in args:
+				game.settings.view_mode = "first_person"
+				game._reset_first_person()
+				game._fp_pitch = -0.035
+				game.player.aiming = "--ads" in args
 			game._update_camera(1)
 			game._update_visibility()
 			if "--nofog" in args: game.visibility_material.set_shader_parameter("enabled",0.0)
-			game.paused = true
+			game.set_physics_process(false)
 			game._update_hud()
 			if "--top" in args:
 				var focus: Vector3 = game.world.sites["B" if "--b" in args else "A"]
@@ -57,7 +62,7 @@ func capture() -> void:
 		if arg in ["--play","--shop","--inventory"]: suffix = arg.replace("--","")
 	if "--nofog" in OS.get_cmdline_user_args(): suffix += "_nofog"
 	if "--source" in OS.get_cmdline_user_args(): suffix += "_source"
-	for tag in ["--top","--b","--clean"]:
+	for tag in ["--top","--b","--clean","--first-person","--ads"]:
 		if tag in OS.get_cmdline_user_args(): suffix += tag.replace("--","_")
 	root.get_texture().get_image().save_png("res://artifacts/game_"+suffix+".png")
 	print("CAPTURE_OK ",suffix," fps=",Engine.get_frames_per_second())

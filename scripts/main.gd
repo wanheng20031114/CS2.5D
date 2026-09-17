@@ -5,6 +5,8 @@ const ActorScript = preload("res://scripts/combatant.gd")
 const Catalog = preload("res://scripts/weapon_catalog.gd")
 const UIScript = preload("res://scripts/game_ui.gd")
 const SoundScript = preload("res://scripts/sound.gd")
+const FirstPersonSettings = preload("res://scripts/first_person_settings.gd")
+const FirstPersonViewmodel = preload("res://scripts/first_person_viewmodel.gd")
 const SIGHT_RADIUS: float = 42.0
 const RAY_COUNT: int = 192
 var world: Node3D
@@ -65,15 +67,30 @@ var map_viewer: RefCounted
 var _preview_hidden: Array[Dictionary] = []
 var _preview_sun: DirectionalLight3D
 var _preview_shadow_distance := 110.0
+var first_person_viewmodel: Node3D
+var _fp_yaw := 0.0
+var _fp_pitch := 0.0
+var _fp_target_yaw := 0.0
+var _fp_target_pitch := 0.0
+var _fp_recoil := 0.0
+var _fp_bob_phase := 0.0
+var _fp_look_delta := Vector2.ZERO
+var _window_focused := true
+var _fire_blocked_until_release := false
+var _fp_was_active := false
 
 func _ready() -> void:
 	rng.randomize()
 	_load_settings()
+	if "--first-person" in OS.get_cmdline_user_args(): settings.view_mode = "first_person"
 	world = MapScript.new()
 	add_child(world)
 	world.build()
 	RenderingServer.global_shader_parameter_set("view_cutaway",0.0)
 	_setup_environment()
+	first_person_viewmodel = FirstPersonViewmodel.new()
+	add_child(first_person_viewmodel)
+	first_person_viewmodel.setup(camera)
 	sound = SoundScript.new()
 	add_child(sound)
 	ui = UIScript.new()
@@ -177,6 +194,9 @@ func _setup_visibility() -> void:
 	mesh.position.z = -1.0
 
 func _menu_camera(t: float) -> void:
+	camera.projection = Camera3D.PROJECTION_ORTHOGONAL
+	camera.near = 0.1
+	camera.far = 240.0
 	var center: Vector3 = world.sites.get("A", Vector3.ZERO)
 	camera.size = 34.0
 	camera.position = center + Vector3(15.0+sin(t*0.055)*2.0,43,17)
@@ -198,7 +218,7 @@ func start_game(chosen_side: String, chosen_mode: String, chosen_difficulty: int
 	feed.clear()
 	ui.show_hud()
 	_new_round(false)
-	ui.toast("WASD 移动 · 鼠标瞄准 · 右键稳枪 · B 购买 · Tab 背包")
+	ui.toast("WASD 移动 · 鼠标瞄准 · V 切换视角 · B 购买 · Tab 背包")
 
 func _new_round(preserve_gear: bool = true) -> void:
 	var kept: Dictionary = {}
@@ -257,10 +277,10 @@ func _new_round(preserve_gear: bool = true) -> void:
 		var bot: CharacterBody3D = _spawn_actor(enemy_side, false, ("ak47" if enemy_side == "T" else "m4a1") if (round_number > 1 or mode == "practice") else ("glock" if enemy_side == "T" else "hkp2000"), i)
 		if enemy_side == "T" and i == 0: bot.bomb_carrier = true
 	camera_target = player.position
+	_reset_first_person()
 	_update_camera(1.0)
-	visibility_material.set_shader_parameter("enabled",1.0)
-	RenderingServer.global_shader_parameter_set("view_cutaway",1.0)
 	ui.close_panels()
+	_sync_mouse_mode()
 	_update_hud()
 
 func _spawn_actor(team: String, human: bool, gun: String, index: int) -> CharacterBody3D:
@@ -299,6 +319,7 @@ func _spawn_actor(team: String, human: bool, gun: String, index: int) -> Charact
 
 func _physics_process(delta: float) -> void:
 	elapsed += delta
+	_sync_mouse_mode()
 	if is_instance_valid(map_viewer) and map_viewer.active:
 		map_viewer.update(delta)
 		if is_instance_valid(_preview_sun):
@@ -321,6 +342,7 @@ func _physics_process(delta: float) -> void:
 			else:
 				_new_round()
 		_update_effects(delta)
+		_update_camera(delta)
 		_update_hud()
 		return
 	buy_time = maxf(0,buy_time-delta)
@@ -352,18 +374,25 @@ func _physics_process(delta: float) -> void:
 		_update_hud()
 
 func _player_input(delta: float, modal: bool) -> void:
+	modal = modal or not _window_focused or (is_first_person() and Input.mouse_mode != Input.MOUSE_MODE_CAPTURED)
+	if is_first_person():
+		_step_first_person_look(delta if not modal else 0.0)
 	var input_axis := Vector2.ZERO
 	if not modal:
 		input_axis.x = float(Input.is_physical_key_pressed(KEY_D))-float(Input.is_physical_key_pressed(KEY_A))
 		input_axis.y = float(Input.is_physical_key_pressed(KEY_S))-float(Input.is_physical_key_pressed(KEY_W))
 	var right := camera.global_basis.x
+	if is_first_person(): right = Basis(Vector3.UP,_fp_yaw).x
 	right.y = 0
 	var forward := -camera.global_basis.z
+	if is_first_person(): forward = -Basis(Vector3.UP,_fp_yaw).z
 	forward.y = 0
 	var direction := (right.normalized()*input_axis.x-forward.normalized()*input_axis.y).normalized()
 	player.aiming = not modal and Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT)
 	player.move_direction(direction,delta,Input.is_physical_key_pressed(KEY_SHIFT))
-	if not modal:
+	if is_first_person():
+		_update_camera(0.0)
+	if not modal and not is_first_person():
 		var mouse := get_viewport().get_mouse_position()
 		var origin := camera.project_ray_origin(mouse)
 		var normal := camera.project_ray_normal(mouse)
@@ -381,8 +410,10 @@ func _player_input(delta: float, modal: bool) -> void:
 		var target_hit := get_world_3d().direct_space_state.intersect_ray(target_query)
 		if not target_hit.is_empty() and target_hit.collider in actors and target_hit.collider.visible:
 			shot_direction = (target_hit.collider.position-player.position).normalized()
+	if not modal:
 		var pressed := Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)
-		if pressed and (not trigger_pressed or player.weapon_data().get("automatic",true)):
+		if not pressed: _fire_blocked_until_release = false
+		if pressed and not _fire_blocked_until_release and (not trigger_pressed or player.weapon_data().get("automatic",true)):
 			_shoot(player,shot_direction)
 		trigger_pressed = pressed
 	else:
@@ -392,6 +423,25 @@ func _player_input(delta: float, modal: bool) -> void:
 		if _foot_clock <= 0:
 			_foot_clock = 0.34 if player.speed > 4 else 0.47
 			sound.play("step",0.20 if player.aiming else 0.38,rng.randf_range(0.85,1.2))
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseMotion and is_first_person() and not paused and not ui.is_modal_open() and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and _window_focused and phase != "result":
+		_apply_first_person_look(event.screen_relative)
+		get_viewport().set_input_as_handled()
+	# Captured clicks must never activate a HUD button behind the crosshair.
+	elif event is InputEventMouseButton and is_first_person() and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+		get_viewport().set_input_as_handled()
+
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_APPLICATION_FOCUS_OUT:
+		_window_focused = false
+		if running and is_instance_valid(ui):
+			paused = true
+			if not ui.is_modal_open(): ui.show_pause()
+		_sync_mouse_mode()
+	elif what == NOTIFICATION_APPLICATION_FOCUS_IN:
+		_window_focused = true
+		_sync_mouse_mode()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if is_instance_valid(map_viewer) and map_viewer.active:
@@ -411,9 +461,14 @@ func _unhandled_input(event: InputEvent) -> void:
 					paused = true
 					if ui.has_method("show_pause"): ui.show_pause()
 					else: ui.show_menu()
+			_sync_mouse_mode()
 			return
 		if not running or not is_instance_valid(player) or not player.alive: return
+		if paused or phase == "result": return
 		match event.physical_keycode:
+			KEY_V:
+				if not ui.is_modal_open() and phase != "result":
+					set_view_mode("top_down" if is_first_person() else "first_person")
 			KEY_B: ui.toggle_shop(Catalog.all(),_state())
 			KEY_TAB: ui.toggle_inventory(_state())
 			KEY_R:
@@ -432,12 +487,13 @@ func _unhandled_input(event: InputEvent) -> void:
 			KEY_F: _pickup()
 			KEY_F5:
 				if mode == "practice": _new_round()
-	if event is InputEventMouseButton and event.pressed and running and not ui.is_modal_open():
+		_sync_mouse_mode()
+	if event is InputEventMouseButton and event.pressed and running and not paused and not ui.is_modal_open() and not is_first_person():
 		if event.button_index == MOUSE_BUTTON_WHEEL_UP: settings.zoom = clampf(float(settings.zoom)-1,16,34)
 		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN: settings.zoom = clampf(float(settings.zoom)+1,16,34)
 
 func _equip(slot: int) -> void:
-	if is_instance_valid(player) and player.alive and slot < 3:
+	if running and not paused and phase != "result" and is_instance_valid(player) and player.alive and slot < 3:
 		player.equip(slot)
 
 func _bot_tick(bot: CharacterBody3D, delta: float) -> void:
@@ -530,13 +586,17 @@ func _smoke_blocks(a: Vector3,b: Vector3) -> bool:
 
 func _shoot(actor: CharacterBody3D, direction: Vector3) -> void:
 	if not actor.alive or actor.shot_timer > 0 or actor.reload_timer > 0 or phase == "result": return
+	var first_person_shot := actor == player and is_first_person()
 	var data: Dictionary = actor.weapon_data()
 	var id: String = actor.current_weapon()
 	if id == "knife":
 		actor.shot_timer = 0.5
 		actor.visual.fire()
+		if first_person_shot: first_person_viewmodel.fire()
 		for victim in actors:
-			if victim.alive and victim.team != actor.team and actor.position.distance_to(victim.position) < 1.8 and direction.dot((victim.position-actor.position).normalized()) > 0.5 and _line_of_sight(actor.position,victim.position):
+			var target_delta: Vector3 = victim.position-actor.position
+			if first_person_shot: target_delta = victim.position+Vector3.UP*1.1-camera.global_position
+			if victim.alive and victim.team != actor.team and actor.position.distance_to(victim.position) < 1.8 and direction.dot(target_delta.normalized()) > 0.5 and _line_of_sight(actor.position,victim.position):
 				_damage(victim,45,actor)
 		return
 	if not actor.ammunition.has(id): return
@@ -550,10 +610,21 @@ func _shoot(actor: CharacterBody3D, direction: Vector3) -> void:
 	actor.shot_timer = 1.0/maxf(0.5,float(data.get("fire_rate",10)))
 	var spread: float = actor.spread_angle()
 	var origin: Vector3 = actor.position+Vector3.UP*1.08
+	if first_person_shot: origin = camera.global_position
 	for pellet in range(int(data.get("pellets",1))):
 		var deviated := direction.rotated(Vector3.UP,rng.randf_range(-spread,spread))
+		if first_person_shot:
+			# A disk in the camera's aim plane provides spread on both axes,
+			# including when looking almost straight up or down.
+			var spread_radius := tan(spread)*sqrt(rng.randf())
+			var spread_phase := rng.randf()*TAU
+			var aim_right := direction.cross(Vector3.UP).normalized()
+			if aim_right.length_squared() < 0.01: aim_right = camera.global_basis.x
+			var aim_up := aim_right.cross(direction).normalized()
+			deviated = (direction+aim_right*cos(spread_phase)*spread_radius+aim_up*sin(spread_phase)*spread_radius).normalized()
 		var end := origin+deviated*float(data.get("range",75))
 		var query := PhysicsRayQueryParameters3D.create(origin,end,3,[actor.get_rid()])
+		query.hit_from_inside = true
 		var hit := get_world_3d().direct_space_state.intersect_ray(query)
 		if not hit.is_empty():
 			end = hit.position
@@ -565,11 +636,15 @@ func _shoot(actor: CharacterBody3D, direction: Vector3) -> void:
 			else:
 				_spark(end,Color("d7b883"),0.06)
 		if actor.is_player or actor.visible:
-			_tracer(actor.visual.get_muzzle_position(),end,Color("ffda84"))
+			var tracer_start: Vector3 = origin+deviated*0.15 if first_person_shot else actor.visual.get_muzzle_position()
+			_tracer(tracer_start,end,Color("ffda84"))
 	actor.bloom = minf(0.14,actor.bloom+float(data.get("recoil",0.012)))
 	actor.visual.fire()
 	if actor.is_player:
 		camera_shake = minf(0.18,camera_shake+0.085)
+		if first_person_shot:
+			_fp_recoil = minf(deg_to_rad(8.0),_fp_recoil+deg_to_rad(float(settings.fp_recoil))*(0.65 if player.aiming else 1.0))
+			first_person_viewmodel.fire()
 	var sound_kind := "rifle"
 	if id in ["usp_silencer","m4a1_silencer","mp5sd"]: sound_kind = "silenced"
 	elif data.get("category","") == "sniper": sound_kind = "sniper"
@@ -702,7 +777,101 @@ func _finish_round(winner: String, reason: String) -> void:
 	ui.close_panels()
 	ui.show_round_result(("反恐精英" if winner == "CT" else "恐怖分子")+"获胜",reason+" · "+("比赛结束" if maxi(score_ct,score_t)>=6 else "下一回合即将开始"))
 
+func is_first_person() -> bool:
+	return running and is_instance_valid(player) and player.alive and settings.get("view_mode","top_down") == "first_person"
+
+func set_view_mode(value: String) -> void:
+	_settings_changed({"view_mode":value})
+	if running: ui.toast("第一人称 · 鼠标转向 · V 返回俯视" if is_first_person() else "俯视 · 鼠标瞄准 · V 切换第一人称")
+
+func _reset_first_person() -> void:
+	_fp_yaw = player.rotation.y if is_instance_valid(player) else 0.0
+	_fp_target_yaw = _fp_yaw
+	_fp_pitch = 0.0
+	_fp_target_pitch = 0.0
+	_fp_recoil = 0.0
+	_fp_bob_phase = 0.0
+	_fp_look_delta = Vector2.ZERO
+	aim_direction = -Basis(Vector3.UP,_fp_yaw).z
+	shot_direction = aim_direction
+	camera_shake = 0.0
+	trigger_pressed = false
+	_fire_blocked_until_release = Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)
+	if is_instance_valid(first_person_viewmodel): first_person_viewmodel.reset()
+
+func _apply_first_person_look(relative: Vector2) -> void:
+	var sensitivity := deg_to_rad(float(settings.fp_sensitivity))
+	if player.aiming: sensitivity *= float(settings.fp_ads_sensitivity)
+	_fp_target_yaw = wrapf(_fp_target_yaw-relative.x*sensitivity,-PI,PI)
+	_fp_target_pitch += relative.y*sensitivity*(1.0 if settings.fp_invert_y else -1.0)
+	_fp_target_pitch = clampf(_fp_target_pitch,-deg_to_rad(float(settings.fp_pitch_down)),deg_to_rad(float(settings.fp_pitch_up)))
+	_fp_look_delta += relative
+	if float(settings.fp_smoothing) == 0.0:
+		_fp_yaw = _fp_target_yaw
+		_fp_pitch = _fp_target_pitch
+
+func _step_first_person_look(delta: float) -> void:
+	var smoothing := float(settings.fp_smoothing)
+	var blend := 1.0 if smoothing == 0.0 else 1.0-exp(-delta*smoothing)
+	_fp_yaw = lerp_angle(_fp_yaw,_fp_target_yaw,blend)
+	_fp_pitch = lerpf(_fp_pitch,_fp_target_pitch,blend)
+	_fp_recoil *= exp(-float(settings.fp_recoil_recovery)*delta)
+	_fp_bob_phase += delta*float(settings.fp_bob_speed)*clampf(player.speed/5.7,0.0,1.2)
+	player.rotation.y = _fp_yaw
+
+func _sync_mouse_mode() -> void:
+	if not is_instance_valid(ui): return
+	var can_control: bool = running and not paused and not ui.is_modal_open() and _window_focused and is_instance_valid(player) and player.alive and phase != "result"
+	var desired := Input.MOUSE_MODE_VISIBLE
+	if can_control: desired = Input.MOUSE_MODE_CAPTURED if is_first_person() else Input.MOUSE_MODE_HIDDEN
+	if not can_control and is_instance_valid(first_person_viewmodel):
+		first_person_viewmodel.update_view(0.0,player,settings,false)
+	if Input.mouse_mode != desired:
+		Input.mouse_mode = desired
+		_fp_look_delta = Vector2.ZERO
+		_fp_target_yaw = _fp_yaw
+		_fp_target_pitch = _fp_pitch
+		_fire_blocked_until_release = Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)
+		trigger_pressed = _fire_blocked_until_release
+
 func _update_camera(delta: float) -> void:
+	var first_person := is_first_person()
+	if is_instance_valid(player): player.visible = not first_person
+	visibility_material.set_shader_parameter("enabled",0.0 if first_person or not running else 1.0)
+	RenderingServer.global_shader_parameter_set("view_cutaway",0.0 if first_person or not running else 1.0)
+	ui.overlay.first_person = first_person
+	ui.overlay.fp_settings = settings
+	if first_person:
+		camera.projection = Camera3D.PROJECTION_PERSPECTIVE
+		camera.keep_aspect = Camera3D.KEEP_HEIGHT
+		camera.near = float(settings.fp_near)
+		camera.far = float(settings.fp_far)
+		var wanted_fov := float(settings.fp_ads_fov if player.aiming else settings.fp_fov)
+		camera.fov = lerpf(camera.fov,wanted_fov,1.0-exp(-delta*12.0)) if _fp_was_active else wanted_fov
+		var bob := sin(_fp_bob_phase)*float(settings.fp_bob)*clampf(player.speed/5.7,0.0,1.0)
+		if not player.is_on_floor(): bob = 0.0
+		camera.position = player.position+Vector3.UP*(float(settings.fp_eye_height)+bob)
+		camera.rotation = Vector3(clampf(_fp_pitch+_fp_recoil,-deg_to_rad(float(settings.fp_pitch_down)),deg_to_rad(float(settings.fp_pitch_up))),_fp_yaw,0.0)
+		aim_direction = -camera.global_basis.z
+		shot_direction = aim_direction
+		var aim_ray := PhysicsRayQueryParameters3D.create(camera.global_position,camera.global_position+aim_direction*float(settings.fp_far),3,[player.get_rid()])
+		aim_ray.hit_from_inside = true
+		var aim_hit := get_world_3d().direct_space_state.intersect_ray(aim_ray)
+		aim_position = aim_hit.position if not aim_hit.is_empty() else camera.global_position+aim_direction*float(settings.fp_far)
+		ui.overlay.fp_fov = camera.fov
+		if delta > 0.0:
+			first_person_viewmodel.update_view(delta,player,settings,not paused and not ui.is_modal_open() and _window_focused and phase != "result",_fp_look_delta)
+			_fp_look_delta = Vector2.ZERO
+		_fp_was_active = true
+		_sync_mouse_mode()
+		return
+	first_person_viewmodel.update_view(delta,player,settings,false)
+	if _fp_was_active:
+		camera_target = player.position
+		_fp_was_active = false
+	camera.projection = Camera3D.PROJECTION_ORTHOGONAL
+	camera.near = 0.1
+	camera.far = 240.0
 	var observer = _observer()
 	if not is_instance_valid(observer): return
 	var lookahead := aim_direction * (2.0 if player.aiming else 1.0) if observer == player else Vector3.ZERO
@@ -734,6 +903,12 @@ func _observer() -> CharacterBody3D:
 	return player
 
 func _update_visibility() -> void:
+	if is_first_person():
+		for actor in actors:
+			actor.visible = actor != player and _first_person_can_see(actor.position)
+		for drop in drops:
+			drop.node.visible = _first_person_can_see(drop.position,true)
+		return
 	var observer = _observer()
 	var center: Vector3 = observer.position
 	var direction: Vector3 = -observer.global_basis.z
@@ -768,6 +943,16 @@ func _update_visibility() -> void:
 	for drop in drops:
 		var diff: Vector3 = drop.position-center
 		drop.node.visible = direction.dot(diff.normalized()) > 0.2 and diff.length() < SIGHT_RADIUS and _line_of_sight(center,drop.position)
+
+func _first_person_can_see(at: Vector3, ground_item: bool = false) -> bool:
+	var origin := camera.global_position
+	for height in ([0.15] if ground_item else [0.45,1.05,1.5]):
+		var point := at+Vector3.UP*float(height)
+		if not camera.is_position_in_frustum(point) or _smoke_blocks(origin,point): continue
+		var ray := PhysicsRayQueryParameters3D.create(origin,point,1)
+		ray.hit_from_inside = true
+		if get_world_3d().direct_space_state.intersect_ray(ray).is_empty(): return true
+	return false
 
 func _buy_allowed() -> bool:
 	return is_instance_valid(player) and player.alive and phase != "result" and buy_time > 0 and player.position.distance_to(world.spawns[side]) < 9.0
@@ -888,7 +1073,12 @@ func _action(action: String) -> void:
 			visibility_material.set_shader_parameter("enabled",0.0)
 			RenderingServer.global_shader_parameter_set("view_cutaway",0.0)
 			for actor in actors: actor.visible = true
+			first_person_viewmodel.reset()
+			first_person_viewmodel.update_view(0.0,player,settings,false)
+			_fp_was_active = false
 			ui.show_menu()
+			_menu_camera(elapsed)
+	_sync_mouse_mode()
 
 func _open_map_preview() -> void:
 	if running: return
@@ -931,7 +1121,18 @@ func _close_map_preview() -> void:
 	_menu_camera(elapsed)
 
 func _settings_changed(values: Dictionary) -> void:
+	var previous_mode: String = str(settings.get("view_mode","top_down"))
 	settings.merge(values,true)
+	settings = FirstPersonSettings.sanitize(settings)
+	if is_instance_valid(ui): ui.set_settings(settings)
+	if previous_mode != settings.view_mode: _reset_first_person()
+	_fp_pitch = clampf(_fp_pitch,-deg_to_rad(float(settings.fp_pitch_down)),deg_to_rad(float(settings.fp_pitch_up)))
+	_fp_target_pitch = clampf(_fp_target_pitch,-deg_to_rad(float(settings.fp_pitch_down)),deg_to_rad(float(settings.fp_pitch_up)))
+	if running and is_instance_valid(player):
+		_update_camera(1.0)
+		_update_visibility()
+		_update_hud()
+	_sync_mouse_mode()
 	AudioServer.set_bus_volume_db(0,linear_to_db(maxf(0.001,float(settings.volume))))
 	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN if settings.fullscreen else DisplayServer.WINDOW_MODE_WINDOWED)
 	var config := ConfigFile.new()
@@ -939,9 +1140,11 @@ func _settings_changed(values: Dictionary) -> void:
 	config.save("user://settings.cfg")
 
 func _load_settings() -> void:
+	settings = FirstPersonSettings.sanitize(settings)
 	var config := ConfigFile.new()
 	if config.load("user://settings.cfg") == OK:
 		for key in settings: settings[key] = config.get_value("game",key,settings[key])
+	settings = FirstPersonSettings.sanitize(settings)
 	AudioServer.set_bus_volume_db(0,linear_to_db(maxf(0.001,float(settings.volume))))
 
 func _box_visual(size: Vector3,color: Color) -> MeshInstance3D:
@@ -1024,6 +1227,7 @@ func _pickup() -> void:
 	ui.toast("靠近地上的武器后按 F 拾取")
 
 func _throw_grenade(id: String) -> void:
+	if not running or paused or phase == "result" or not is_instance_valid(player) or not player.alive: return
 	if ui.is_modal_open() or int(player.supplies.get(id,0)) <= 0:
 		ui.toast("未携带该投掷物 · B 购买")
 		return
@@ -1034,6 +1238,10 @@ func _throw_grenade(id: String) -> void:
 	var distance := minf(20,(target-start).length())
 	var flight_time := 0.8
 	var velocity := aim_direction*distance/flight_time+Vector3.UP*4.8
+	if is_first_person():
+		# Start at the eye so nearby walls cannot be skipped by an offset spawn.
+		start = camera.global_position
+		velocity = aim_direction*18.0+Vector3.UP*4.8
 	var node := _box_visual(Vector3(0.17,0.23,0.17),Color("586451"))
 	add_child(node)
 	node.position = start
@@ -1135,6 +1343,8 @@ func _update_respawns(delta: float) -> void:
 				player = fresh
 				player.armor = 100
 				money = 16000
+				_reset_first_person()
+				camera_target = player.position
 			actors.erase(old)
 			old.queue_free()
 			respawns.remove_at(i)
